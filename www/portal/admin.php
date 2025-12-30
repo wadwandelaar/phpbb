@@ -115,10 +115,7 @@ if ($request->is_set_post('submit')) {
 	if (!check_form_key('portal_blocks')) {
 		$save_message = 'Formulier verlopen, probeer opnieuw.';
 	} else {
-		$incoming = $request->variable('blocks', [], true);
-		if (empty($incoming) && isset($_POST['blocks']) && is_array($_POST['blocks'])) {
-			$incoming = $_POST['blocks'];
-		}
+		$incoming = $request->raw_variable('blocks', []);
 		$allowed_keys = array_keys($portal_blocks);
 		foreach ($allowed_keys as $block_key) {
 			if (!isset($incoming[$block_key]) || !is_array($incoming[$block_key])) {
