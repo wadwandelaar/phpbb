@@ -224,6 +224,20 @@ input[type="password"] {
   background: var(--bg-alt);
 }
 
+.admin-grid {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.admin-block {
+  padding: 14px;
+}
+
+.admin-block .panel__title {
+  margin-bottom: 8px;
+}
+
 .online-list {
   margin-top: 10px;
   font-size: 13px;

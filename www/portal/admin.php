@@ -14,6 +14,20 @@ function portal_h($value)
 	return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
 }
 
+function portal_form_token_fields($form_name)
+{
+	global $config, $user;
+
+	$now = time();
+	$token_sid = ($user->data['user_id'] == ANONYMOUS && !empty($config['form_token_sid_guests'])) ? $user->session_id : '';
+	$token = sha1($now . $user->data['user_form_salt'] . $form_name . $token_sid);
+
+	return build_hidden_fields([
+		'creation_time' => $now,
+		'form_token' => $token,
+	]);
+}
+
 $is_moderator = $auth->acl_get('m_');
 $is_admin = $auth->acl_get('a_');
 $is_allowed = $user->data['is_registered'] && ($is_admin || $is_moderator);
@@ -95,7 +109,7 @@ if (is_file($portal_blocks_path)) {
 
 $request = $phpbb_container->get('request');
 $save_message = '';
-add_form_key('portal_blocks');
+$form_token_fields = portal_form_token_fields('portal_blocks');
 
 if ($request->is_set_post('submit')) {
 	if (!check_form_key('portal_blocks')) {
@@ -151,28 +165,30 @@ if ($request->is_set_post('submit')) {
 					<p class="muted"><?php echo portal_h($save_message); ?></p>
 				<?php endif; ?>
 				<form method="post">
-					<?php foreach ($portal_blocks as $key => $block) : ?>
-						<fieldset class="panel" style="margin-bottom: 16px;">
-							<legend class="panel__title"><?php echo portal_h($block['title']); ?></legend>
-							<label class="field">
-								<span>Titel</span>
-								<input type="text" name="blocks[<?php echo portal_h($key); ?>][title]" value="<?php echo portal_h($block['title']); ?>">
-							</label>
-							<label class="field">
-								<span>Link (topic URL)</span>
-								<input type="text" name="blocks[<?php echo portal_h($key); ?>][link]" value="<?php echo portal_h($block['link']); ?>">
-							</label>
-							<label class="field">
-								<span>Afbeelding URL</span>
-								<input type="text" name="blocks[<?php echo portal_h($key); ?>][image]" value="<?php echo portal_h($block['image']); ?>">
-							</label>
-							<label class="field">
-								<span>Caption</span>
-								<input type="text" name="blocks[<?php echo portal_h($key); ?>][caption]" value="<?php echo portal_h($block['caption']); ?>">
-							</label>
-						</fieldset>
-					<?php endforeach; ?>
-					<?php echo $form_token; ?>
+					<div class="admin-grid">
+						<?php foreach ($portal_blocks as $key => $block) : ?>
+							<div class="panel admin-block">
+								<h3 class="panel__title"><?php echo portal_h($block['title']); ?></h3>
+								<label class="field">
+									<span>Titel</span>
+									<input type="text" name="blocks[<?php echo portal_h($key); ?>][title]" value="<?php echo portal_h($block['title']); ?>">
+								</label>
+								<label class="field">
+									<span>Link (topic URL)</span>
+									<input type="text" name="blocks[<?php echo portal_h($key); ?>][link]" value="<?php echo portal_h($block['link']); ?>">
+								</label>
+								<label class="field">
+									<span>Afbeelding URL</span>
+									<input type="text" name="blocks[<?php echo portal_h($key); ?>][image]" value="<?php echo portal_h($block['image']); ?>">
+								</label>
+								<label class="field">
+									<span>Caption</span>
+									<input type="text" name="blocks[<?php echo portal_h($key); ?>][caption]" value="<?php echo portal_h($block['caption']); ?>">
+								</label>
+							</div>
+						<?php endforeach; ?>
+					</div>
+					<?php echo $form_token_fields; ?>
 					<button class="button" type="submit" name="submit">Opslaan</button>
 				</form>
 			</section>
