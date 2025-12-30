@@ -1,0 +1,55 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: phpbb-web
+    platform: linux/arm64
+    restart: unless-stopped
+    ports:
+      - "8222:80"
+    volumes:
+      - /mnt/docker/appdata/phpbb/www:/var/www/html
+    environment:
+      TZ: Europe/Amsterdam
+    depends_on:
+      - db
+    networks:
+      - proxy-net
+
+  db:
+    image: mariadb:11.4
+    container_name: phpbb-db
+    platform: linux/arm64
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      TZ: Europe/Amsterdam
+    volumes:
+      - /mnt/docker/appdata/phpbb/db:/var/lib/mysql
+    networks:
+      - proxy-net
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpbb-phpmyadmin
+    platform: linux/arm64
+    restart: unless-stopped
+    ports:
+      - "8223:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: ${MYSQL_USER}
+      PMA_PASSWORD: ${MYSQL_PASSWORD}
+      UPLOAD_LIMIT: 64M
+      TZ: Europe/Amsterdam
+    networks:
+      - proxy-net
+
+networks:
+  proxy-net:
+    external: true
+

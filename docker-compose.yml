@@ -1,0 +1,74 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: phpbb-web
+    platform: linux/arm64
+    restart: unless-stopped
+    # ports niet nodig als je via NPM werkt:
+    # ports:
+    #   - "8222:80"
+    volumes:
+      - /mnt/docker/appdata/phpbb/www:/var/www/html
+    environment:
+      TZ: Europe/Amsterdam
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - proxy-net
+      - app-net
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  db:
+    image: mariadb:11.4
+    container_name: phpbb-db
+    platform: linux/arm64
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      TZ: Europe/Amsterdam
+    volumes:
+      - /mnt/docker/appdata/phpbb/db:/var/lib/mysql
+    networks:
+      - app-net
+    healthcheck:
+      test: ["CMD-SHELL", "mariadb-admin ping -h localhost -p$${MYSQL_ROOT_PASSWORD} --silent"]
+      interval: 30s
+      timeout: 5s
+      retries: 10
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpbb-phpmyadmin
+    platform: linux/arm64
+    restart: unless-stopped
+    # ports liever uit, en alleen via NPM of lokaal:
+    # ports:
+    #   - "8223:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: ${MYSQL_USER}
+      PMA_PASSWORD: ${MYSQL_PASSWORD}
+      UPLOAD_LIMIT: 64M
+      TZ: Europe/Amsterdam
+    networks:
+      - proxy-net
+      - app-net
+    # Optioneel: alleen aanzetten wanneer nodig
+
+networks:
+  proxy-net:
+    external: true
+  app-net:
+    driver: bridge
+    internal: true
+
