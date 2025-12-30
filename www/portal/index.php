@@ -16,17 +16,29 @@ $portal_blocks = [
 		'image' => './assets/placeholder-week.svg',
 		'caption' => 'Vervang dit blok met de foto van vandaag.',
 	],
+	'yesterdays_choice' => [
+		'title' => "Yesterday's choice",
+		'link' => $phpbb_url_path . 'viewtopic.php?t=2',
+		'image' => './assets/placeholder-week.svg',
+		'caption' => 'Vervang dit blok met de foto van gisteren.',
+	],
 	'weekfoto' => [
 		'title' => 'Weekfoto',
-		'link' => $phpbb_url_path . 'viewtopic.php?t=2',
+		'link' => $phpbb_url_path . 'viewtopic.php?t=3',
 		'image' => './assets/placeholder-week.svg',
 		'caption' => 'Vervang dit blok met de weekfoto winnaar.',
 	],
 	'maandopdracht' => [
 		'title' => 'Maandopdracht',
-		'link' => $phpbb_url_path . 'viewtopic.php?t=3',
+		'link' => $phpbb_url_path . 'viewtopic.php?t=4',
 		'image' => './assets/placeholder-month.svg',
 		'caption' => 'Vervang dit blok met de maandopdracht.',
+	],
+	'challenge' => [
+		'title' => 'Challenge',
+		'link' => $phpbb_url_path . 'viewtopic.php?t=5',
+		'image' => './assets/placeholder-month.svg',
+		'caption' => 'Vervang dit blok met de huidige challenge.',
 	],
 ];
 
@@ -67,6 +79,18 @@ $sql = 'SELECT t.topic_id, t.topic_title, t.topic_last_post_time
 $result = $db->sql_query_limit($sql, 10);
 while ($row = $db->sql_fetchrow($result)) {
 	$active_topics[] = $row;
+}
+$db->sql_freeresult($result);
+
+$top_topics = [];
+$sql = 'SELECT t.topic_id, t.topic_title, t.topic_replies, t.topic_last_post_time
+		FROM ' . TOPICS_TABLE . ' t
+		WHERE t.topic_visibility = 1
+			AND t.topic_moved_id = 0
+		ORDER BY t.topic_replies DESC, t.topic_last_post_time DESC';
+$result = $db->sql_query_limit($sql, 5);
+while ($row = $db->sql_fetchrow($result)) {
+	$top_topics[] = $row;
 }
 $db->sql_freeresult($result);
 
@@ -130,6 +154,14 @@ function portal_h($value)
 			</section>
 
 			<section class="panel">
+				<h2 class="panel__title"><?php echo portal_h($portal_blocks['yesterdays_choice']['title']); ?></h2>
+				<a class="promo" href="<?php echo portal_h($portal_blocks['yesterdays_choice']['link']); ?>">
+					<img src="<?php echo portal_h($portal_blocks['yesterdays_choice']['image']); ?>" alt="">
+					<span><?php echo portal_h($portal_blocks['yesterdays_choice']['caption']); ?></span>
+				</a>
+			</section>
+
+			<section class="panel">
 				<h2 class="panel__title">Inloggen</h2>
 				<form action="<?php echo portal_h($login_action); ?>" method="post">
 					<label class="field">
@@ -189,6 +221,14 @@ function portal_h($value)
 			</section>
 
 			<section class="panel">
+				<h2 class="panel__title"><?php echo portal_h($portal_blocks['challenge']['title']); ?></h2>
+				<a class="promo" href="<?php echo portal_h($portal_blocks['challenge']['link']); ?>">
+					<img src="<?php echo portal_h($portal_blocks['challenge']['image']); ?>" alt="">
+					<span><?php echo portal_h($portal_blocks['challenge']['caption']); ?></span>
+				</a>
+			</section>
+
+			<section class="panel">
 				<h2 class="panel__title">Laatste onderwerpen</h2>
 				<div class="topics">
 					<?php foreach ($latest_topics as $topic) : ?>
@@ -215,6 +255,18 @@ function portal_h($value)
 						<a class="topic" href="<?php echo portal_h(append_sid("{$phpbb_url_path}viewtopic.$phpEx", 't=' . (int) $topic['topic_id'])); ?>">
 							<span class="topic__title"><?php echo portal_h($topic['topic_title']); ?></span>
 							<span class="topic__date"><?php echo portal_h($user->format_date((int) $topic['topic_last_post_time'], 'd M')); ?></span>
+						</a>
+					<?php endforeach; ?>
+				</div>
+			</section>
+
+			<section class="panel">
+				<h2 class="panel__title">Top 5 onderwerpen</h2>
+				<div class="topics topics--compact">
+					<?php foreach ($top_topics as $topic) : ?>
+						<a class="topic" href="<?php echo portal_h(append_sid("{$phpbb_url_path}viewtopic.$phpEx", 't=' . (int) $topic['topic_id'])); ?>">
+							<span class="topic__title"><?php echo portal_h($topic['topic_title']); ?></span>
+							<span class="topic__date"><?php echo (int) $topic['topic_replies']; ?> reacties</span>
 						</a>
 					<?php endforeach; ?>
 				</div>

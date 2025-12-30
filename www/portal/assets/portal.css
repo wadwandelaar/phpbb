@@ -103,6 +103,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.8px;
   color: var(--accent);
+  text-align: center;
 }
 
 .field {
@@ -215,6 +216,7 @@ input[type="password"] {
   gap: 10px;
   color: var(--muted);
   font-size: 14px;
+  text-align: center;
 }
 
 .promo img {
@@ -260,5 +262,11 @@ input[type="password"] {
 @media (max-width: 980px) {
   .layout {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .admin-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

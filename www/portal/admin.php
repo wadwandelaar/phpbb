@@ -82,17 +82,29 @@ $portal_blocks = [
 		'image' => './assets/placeholder-week.svg',
 		'caption' => 'Vervang dit blok met de foto van vandaag.',
 	],
+	'yesterdays_choice' => [
+		'title' => "Yesterday's choice",
+		'link' => $phpbb_url_path . 'viewtopic.php?t=2',
+		'image' => './assets/placeholder-week.svg',
+		'caption' => 'Vervang dit blok met de foto van gisteren.',
+	],
 	'weekfoto' => [
 		'title' => 'Weekfoto',
-		'link' => $phpbb_url_path . 'viewtopic.php?t=2',
+		'link' => $phpbb_url_path . 'viewtopic.php?t=3',
 		'image' => './assets/placeholder-week.svg',
 		'caption' => 'Vervang dit blok met de weekfoto winnaar.',
 	],
 	'maandopdracht' => [
 		'title' => 'Maandopdracht',
-		'link' => $phpbb_url_path . 'viewtopic.php?t=3',
+		'link' => $phpbb_url_path . 'viewtopic.php?t=4',
 		'image' => './assets/placeholder-month.svg',
 		'caption' => 'Vervang dit blok met de maandopdracht.',
+	],
+	'challenge' => [
+		'title' => 'Challenge',
+		'link' => $phpbb_url_path . 'viewtopic.php?t=5',
+		'image' => './assets/placeholder-month.svg',
+		'caption' => 'Vervang dit blok met de huidige challenge.',
 	],
 ];
 
