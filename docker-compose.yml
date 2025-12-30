@@ -7,6 +7,7 @@ services:
     # ports niet nodig als je via NPM werkt:
     # ports:
     #   - "8222:80"
+    working_dir: /var/www/html
     volumes:
       - /mnt/docker/appdata/phpbb/www:/var/www/html
     environment:
@@ -69,4 +70,3 @@ networks:
   app-net:
     driver: bridge
     internal: true
-
