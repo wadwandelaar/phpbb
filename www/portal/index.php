@@ -83,11 +83,11 @@ while ($row = $db->sql_fetchrow($result)) {
 $db->sql_freeresult($result);
 
 $top_topics = [];
-$sql = 'SELECT t.topic_id, t.topic_title, t.topic_replies, t.topic_last_post_time
+$sql = 'SELECT t.topic_id, t.topic_title, t.topic_posts_approved, t.topic_last_post_time
 		FROM ' . TOPICS_TABLE . ' t
 		WHERE t.topic_visibility = 1
 			AND t.topic_moved_id = 0
-		ORDER BY t.topic_replies DESC, t.topic_last_post_time DESC';
+		ORDER BY t.topic_posts_approved DESC, t.topic_last_post_time DESC';
 $result = $db->sql_query_limit($sql, 5);
 while ($row = $db->sql_fetchrow($result)) {
 	$top_topics[] = $row;
@@ -266,7 +266,7 @@ function portal_h($value)
 					<?php foreach ($top_topics as $topic) : ?>
 						<a class="topic" href="<?php echo portal_h(append_sid("{$phpbb_url_path}viewtopic.$phpEx", 't=' . (int) $topic['topic_id'])); ?>">
 							<span class="topic__title"><?php echo portal_h($topic['topic_title']); ?></span>
-							<span class="topic__date"><?php echo (int) $topic['topic_replies']; ?> reacties</span>
+							<span class="topic__date"><?php echo max(0, (int) $topic['topic_posts_approved'] - 1); ?> reacties</span>
 						</a>
 					<?php endforeach; ?>
 				</div>
