@@ -10,19 +10,37 @@ $auth->acl($user->data);
 $user->setup();
 
 $portal_blocks = [
+	'todays_choice' => [
+		'title' => "Today's choice",
+		'link' => $phpbb_url_path . 'viewtopic.php?t=1',
+		'image' => './assets/placeholder-week.svg',
+		'caption' => 'Vervang dit blok met de foto van vandaag.',
+	],
 	'weekfoto' => [
 		'title' => 'Weekfoto',
-		'link' => $phpbb_url_path . 'viewtopic.php?t=1',
+		'link' => $phpbb_url_path . 'viewtopic.php?t=2',
 		'image' => './assets/placeholder-week.svg',
 		'caption' => 'Vervang dit blok met de weekfoto winnaar.',
 	],
 	'maandopdracht' => [
 		'title' => 'Maandopdracht',
-		'link' => $phpbb_url_path . 'viewtopic.php?t=2',
+		'link' => $phpbb_url_path . 'viewtopic.php?t=3',
 		'image' => './assets/placeholder-month.svg',
 		'caption' => 'Vervang dit blok met de maandopdracht.',
 	],
 ];
+
+$portal_blocks_path = __DIR__ . '/data/portal_blocks.json';
+if (is_file($portal_blocks_path)) {
+	$portal_blocks_data = json_decode((string) file_get_contents($portal_blocks_path), true);
+	if (is_array($portal_blocks_data)) {
+		foreach ($portal_blocks as $key => $defaults) {
+			if (isset($portal_blocks_data[$key]) && is_array($portal_blocks_data[$key])) {
+				$portal_blocks[$key] = array_merge($defaults, $portal_blocks_data[$key]);
+			}
+		}
+	}
+}
 
 $latest_topics = [];
 $sql = 'SELECT t.topic_id, t.topic_title, t.topic_last_post_time, t.topic_last_post_id, t.forum_id,
@@ -94,12 +112,23 @@ function portal_h($value)
 				<a href="<?php echo portal_h($faq_url); ?>">Help</a>
 				<a href="<?php echo portal_h($search_url); ?>">Zoeken</a>
 				<a href="<?php echo portal_h($forum_url); ?>">Forum</a>
+				<?php if ($auth->acl_get('a_') || $auth->acl_get('m_')) : ?>
+					<a href="./admin.php">Beheer</a>
+				<?php endif; ?>
 			</nav>
 		</div>
 	</header>
 
 	<main class="layout">
 		<aside class="col col--left">
+			<section class="panel">
+				<h2 class="panel__title"><?php echo portal_h($portal_blocks['todays_choice']['title']); ?></h2>
+				<a class="promo" href="<?php echo portal_h($portal_blocks['todays_choice']['link']); ?>">
+					<img src="<?php echo portal_h($portal_blocks['todays_choice']['image']); ?>" alt="">
+					<span><?php echo portal_h($portal_blocks['todays_choice']['caption']); ?></span>
+				</a>
+			</section>
+
 			<section class="panel">
 				<h2 class="panel__title">Inloggen</h2>
 				<form action="<?php echo portal_h($login_action); ?>" method="post">

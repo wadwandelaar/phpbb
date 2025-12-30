@@ -1,0 +1,140 @@
+<?php
+define('IN_PHPBB', true);
+$phpbb_root_path = '../phpbb/';
+$phpbb_url_path = '/forum/';
+$phpEx = substr(strrchr(__FILE__, '.'), 1);
+require($phpbb_root_path . 'common.' . $phpEx);
+
+$user->session_begin();
+$auth->acl($user->data);
+$user->setup();
+
+if (!$user->data['is_registered'] || (!$auth->acl_get('a_') && !$auth->acl_get('m_'))) {
+	trigger_error('Je hebt geen toegang tot deze pagina.');
+}
+
+$portal_blocks_path = __DIR__ . '/data/portal_blocks.json';
+$portal_blocks = [
+	'todays_choice' => [
+		'title' => "Today's choice",
+		'link' => $phpbb_url_path . 'viewtopic.php?t=1',
+		'image' => './assets/placeholder-week.svg',
+		'caption' => 'Vervang dit blok met de foto van vandaag.',
+	],
+	'weekfoto' => [
+		'title' => 'Weekfoto',
+		'link' => $phpbb_url_path . 'viewtopic.php?t=2',
+		'image' => './assets/placeholder-week.svg',
+		'caption' => 'Vervang dit blok met de weekfoto winnaar.',
+	],
+	'maandopdracht' => [
+		'title' => 'Maandopdracht',
+		'link' => $phpbb_url_path . 'viewtopic.php?t=3',
+		'image' => './assets/placeholder-month.svg',
+		'caption' => 'Vervang dit blok met de maandopdracht.',
+	],
+];
+
+if (is_file($portal_blocks_path)) {
+	$portal_blocks_data = json_decode((string) file_get_contents($portal_blocks_path), true);
+	if (is_array($portal_blocks_data)) {
+		foreach ($portal_blocks as $key => $defaults) {
+			if (isset($portal_blocks_data[$key]) && is_array($portal_blocks_data[$key])) {
+				$portal_blocks[$key] = array_merge($defaults, $portal_blocks_data[$key]);
+			}
+		}
+	}
+}
+
+$request = $phpbb_container->get('request');
+$save_message = '';
+add_form_key('portal_blocks');
+
+if ($request->is_set_post('submit')) {
+	if (!check_form_key('portal_blocks')) {
+		$save_message = 'Formulier verlopen, probeer opnieuw.';
+	} else {
+		$incoming = $request->variable('blocks', [], true);
+		$allowed_keys = array_keys($portal_blocks);
+		foreach ($allowed_keys as $block_key) {
+			if (!isset($incoming[$block_key]) || !is_array($incoming[$block_key])) {
+				continue;
+			}
+			foreach (['title', 'link', 'image', 'caption'] as $field) {
+				if (isset($incoming[$block_key][$field])) {
+					$portal_blocks[$block_key][$field] = trim((string) $incoming[$block_key][$field]);
+				}
+			}
+		}
+		if (!is_dir(dirname($portal_blocks_path))) {
+			mkdir(dirname($portal_blocks_path), 0775, true);
+		}
+		file_put_contents($portal_blocks_path, json_encode($portal_blocks, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+		$save_message = 'Opgeslagen.';
+	}
+}
+
+function portal_h($value)
+{
+	return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+}
+?>
+<!doctype html>
+<html lang="nl">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portal beheer</title>
+	<link rel="stylesheet" href="./assets/portal.css">
+</head>
+<body>
+	<header class="hero">
+		<div class="hero__inner">
+			<div class="brand">
+				<div class="brand__title">Portal beheer</div>
+				<div class="brand__subtitle">Bewerk featured blokken</div>
+			</div>
+			<nav class="nav">
+				<a href="./">Terug naar portal</a>
+				<a href="<?php echo portal_h($phpbb_url_path); ?>">Forum</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="layout">
+		<section class="col col--main">
+			<section class="panel">
+				<h2 class="panel__title">Featured blokken</h2>
+				<?php if ($save_message) : ?>
+					<p class="muted"><?php echo portal_h($save_message); ?></p>
+				<?php endif; ?>
+				<form method="post">
+					<?php foreach ($portal_blocks as $key => $block) : ?>
+						<fieldset class="panel" style="margin-bottom: 16px;">
+							<legend class="panel__title"><?php echo portal_h($block['title']); ?></legend>
+							<label class="field">
+								<span>Titel</span>
+								<input type="text" name="blocks[<?php echo portal_h($key); ?>][title]" value="<?php echo portal_h($block['title']); ?>">
+							</label>
+							<label class="field">
+								<span>Link (topic URL)</span>
+								<input type="text" name="blocks[<?php echo portal_h($key); ?>][link]" value="<?php echo portal_h($block['link']); ?>">
+							</label>
+							<label class="field">
+								<span>Afbeelding URL</span>
+								<input type="text" name="blocks[<?php echo portal_h($key); ?>][image]" value="<?php echo portal_h($block['image']); ?>">
+							</label>
+							<label class="field">
+								<span>Caption</span>
+								<input type="text" name="blocks[<?php echo portal_h($key); ?>][caption]" value="<?php echo portal_h($block['caption']); ?>">
+							</label>
+						</fieldset>
+					<?php endforeach; ?>
+					<?php echo $form_token; ?>
+					<button class="button" type="submit" name="submit">Opslaan</button>
+				</form>
+			</section>
+		</section>
+	</main>
+</body>
+</html>
