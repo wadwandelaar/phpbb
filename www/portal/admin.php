@@ -155,7 +155,7 @@ if ($request->is_set_post('submit')) {
 	<title>Portal beheer</title>
 	<link rel="stylesheet" href="./assets/portal.css">
 </head>
-<body>
+<body class="admin-page">
 	<header class="hero">
 		<div class="hero__inner">
 			<div class="brand">

@@ -233,6 +233,14 @@ input[type="password"] {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+.admin-page .layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.admin-page .col--main {
+  grid-column: 1 / -1;
+}
+
 .admin-block {
   padding: 14px;
 }
