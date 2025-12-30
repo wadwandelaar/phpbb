@@ -9,8 +9,55 @@ $user->session_begin();
 $auth->acl($user->data);
 $user->setup();
 
-if (!$user->data['is_registered'] || (!$auth->acl_get('a_') && !$auth->acl_get('m_'))) {
-	trigger_error('Je hebt geen toegang tot deze pagina.');
+function portal_h($value)
+{
+	return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+}
+
+$is_moderator = $auth->acl_get('m_');
+$is_admin = $auth->acl_get('a_');
+$is_allowed = $user->data['is_registered'] && ($is_admin || $is_moderator);
+
+if (!$is_allowed) {
+	$login_url = append_sid("{$phpbb_url_path}ucp.$phpEx", 'mode=login&redirect=' . urlencode('/admin.php'));
+	$message = $user->data['is_registered'] ? 'Je hebt geen toegang tot deze pagina.' : 'Log in om het portal te beheren.';
+	?>
+	<!doctype html>
+	<html lang="nl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Portal beheer</title>
+		<link rel="stylesheet" href="./assets/portal.css">
+	</head>
+	<body>
+		<header class="hero">
+			<div class="hero__inner">
+				<div class="brand">
+					<div class="brand__title">Portal beheer</div>
+					<div class="brand__subtitle">Toegang vereist</div>
+				</div>
+				<nav class="nav">
+					<a href="./">Terug naar portal</a>
+					<a href="<?php echo portal_h($phpbb_url_path); ?>">Forum</a>
+				</nav>
+			</div>
+		</header>
+		<main class="layout">
+			<section class="col col--main">
+				<section class="panel">
+					<h2 class="panel__title">Toegang</h2>
+					<p class="muted"><?php echo portal_h($message); ?></p>
+					<?php if (!$user->data['is_registered']) : ?>
+						<a class="button" href="<?php echo portal_h($login_url); ?>">Inloggen</a>
+					<?php endif; ?>
+				</section>
+			</section>
+		</main>
+	</body>
+	</html>
+	<?php
+	exit;
 }
 
 $portal_blocks_path = __DIR__ . '/data/portal_blocks.json';
@@ -72,11 +119,6 @@ if ($request->is_set_post('submit')) {
 		file_put_contents($portal_blocks_path, json_encode($portal_blocks, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 		$save_message = 'Opgeslagen.';
 	}
-}
-
-function portal_h($value)
-{
-	return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
 }
 ?>
 <!doctype html>
