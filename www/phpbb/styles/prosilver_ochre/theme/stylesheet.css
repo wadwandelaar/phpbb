@@ -70,19 +70,22 @@ body {
 }
 
 .topic-trophy-inline .icon {
-  font-size: 20px;
+  font-size: 24px;
+  text-shadow: 0 0 6px rgba(255, 208, 77, 0.6), 0 0 12px rgba(255, 208, 77, 0.35);
 }
 
 .topic-trophy-inline.trophy--today .icon {
-  color: #d4a017;
+  color: #f7c325;
 }
 
 .topic-trophy-inline.trophy--yesterday .icon {
-  color: #c0c0c0;
+  color: #cfd3d8;
+  text-shadow: 0 0 6px rgba(200, 205, 210, 0.6), 0 0 12px rgba(200, 205, 210, 0.35);
 }
 
 .topic-trophy-inline.trophy--weekfoto .icon {
-  color: #c9922a;
+  color: #e0a12b;
+  text-shadow: 0 0 6px rgba(255, 208, 77, 0.55), 0 0 12px rgba(255, 208, 77, 0.35);
 }
 a,
 a:link,
