@@ -32,6 +32,7 @@ class listener implements EventSubscriberInterface
 		if (isset($map[$topic_id])) {
 			$topic_row['S_TROPHY'] = true;
 			$topic_row['TROPHY_TITLE'] = $map[$topic_id]['title'];
+			$topic_row['TROPHY_TYPE'] = $map[$topic_id]['type'];
 		} else {
 			$topic_row['S_TROPHY'] = false;
 		}
@@ -60,8 +61,18 @@ class listener implements EventSubscriberInterface
 		}
 
 		$labels = [
-			'todays_choice' => "Today's choice",
-			'yesterdays_choice' => "Yesterday's choice",
+			'todays_choice' => [
+				'title' => "Today's choice",
+				'type' => 'today',
+			],
+			'yesterdays_choice' => [
+				'title' => "Yesterday's choice",
+				'type' => 'yesterday',
+			],
+			'weekfoto' => [
+				'title' => 'Weekfoto',
+				'type' => 'weekfoto',
+			],
 		];
 
 		$map = [];
@@ -71,7 +82,10 @@ class listener implements EventSubscriberInterface
 			}
 			$topic_id = $this->extract_topic_id($data[$key]['link']);
 			if ($topic_id) {
-				$map[$topic_id] = ['title' => $label];
+				$map[$topic_id] = [
+					'title' => $label['title'],
+					'type' => $label['type'],
+				];
 			}
 		}
 

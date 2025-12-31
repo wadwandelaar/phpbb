@@ -70,6 +70,18 @@ body {
 }
 
 .topic-trophy-inline .icon {
+  font-size: 20px;
+}
+
+.topic-trophy-inline.trophy--today .icon {
+  color: #d4a017;
+}
+
+.topic-trophy-inline.trophy--yesterday .icon {
+  color: #c0c0c0;
+}
+
+.topic-trophy-inline.trophy--weekfoto .icon {
   color: #c9922a;
 }
 a,

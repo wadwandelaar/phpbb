@@ -167,8 +167,14 @@
 							</a>
 						<!-- ENDIF -->
 						<!-- IF topicrow.S_TROPHY -->
-							<span class="topic-trophy-inline" title="{topicrow.TROPHY_TITLE}">
-								<i class="icon fa-trophy fa-fw" aria-hidden="true"></i>
+							<span class="topic-trophy-inline trophy--{topicrow.TROPHY_TYPE}" title="{topicrow.TROPHY_TITLE}">
+								<!-- IF topicrow.TROPHY_TYPE eq 'today' -->
+									<i class="icon fa-star fa-fw" aria-hidden="true"></i>
+								<!-- ELSEIF topicrow.TROPHY_TYPE eq 'yesterday' -->
+									<i class="icon fa-star fa-fw" aria-hidden="true"></i>
+								<!-- ELSE -->
+									<i class="icon fa-trophy fa-fw" aria-hidden="true"></i>
+								<!-- ENDIF -->
 								<span class="sr-only">{topicrow.TROPHY_TITLE}</span>
 							</span>
 						<!-- ENDIF -->
