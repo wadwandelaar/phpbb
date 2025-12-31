@@ -98,10 +98,13 @@ body {
   margin: 10px 0 16px;
   font-weight: 800;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   text-align: center;
   border: 1px solid #d9c49e;
-  background: #fff5df;
+  background: #ffe7bf;
   color: #7a4f00;
+  font-size: 20px;
 }
 
 .topic-badge .icon {
