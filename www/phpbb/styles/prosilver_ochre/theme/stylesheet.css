@@ -103,12 +103,20 @@ body {
   text-align: center;
   border: 1px solid #d9c49e;
   background: #F5C36B;
-  color: #7a4f00;
+  color: #4a3200;
   font-size: 20px;
 }
 
 .topic-badge .icon {
   font-size: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 999px;
+  background: #fff7e6;
+  border: 1px solid #d9c49e;
+  text-shadow: none;
 }
 
 .topic-badge--today .icon {
