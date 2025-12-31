@@ -19,12 +19,13 @@
 }
 
 .portal-brand__title {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
 .portal-brand__subtitle {
+  font-size: 14px;
   color: #7a6848;
   margin-top: 2px;
 }
