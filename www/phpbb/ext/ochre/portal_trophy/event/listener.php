@@ -3,15 +3,18 @@
 namespace ochre\portal_trophy\event;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use phpbb\template\template;
 
 class listener implements EventSubscriberInterface
 {
 	private $root_path;
 	private $trophy_map;
+	private $template;
 
-	public function __construct($root_path)
+	public function __construct($root_path, template $template)
 	{
 		$this->root_path = $root_path;
+		$this->template = $template;
 		$this->trophy_map = null;
 	}
 
@@ -19,6 +22,7 @@ class listener implements EventSubscriberInterface
 	{
 		return [
 			'core.viewforum_modify_topicrow' => 'add_trophy',
+			'core.viewtopic_assign_template_vars_before' => 'add_topic_badge',
 		];
 	}
 
@@ -38,6 +42,19 @@ class listener implements EventSubscriberInterface
 		}
 
 		$event['topic_row'] = $topic_row;
+	}
+
+	public function add_topic_badge($event)
+	{
+		$topic_id = (int) $event['topic_id'];
+		$map = $this->get_trophy_map();
+		if (isset($map[$topic_id])) {
+			$this->template->assign_vars([
+				'S_TOPIC_BADGE' => true,
+				'TOPIC_BADGE_TITLE' => $map[$topic_id]['title'],
+				'TOPIC_BADGE_TYPE' => $map[$topic_id]['type'],
+			]);
+		}
 	}
 
 	private function get_trophy_map()

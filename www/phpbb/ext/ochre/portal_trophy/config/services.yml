@@ -3,5 +3,6 @@ services:
     class: ochre\portal_trophy\event\listener
     arguments:
       - '%core.root_path%'
+      - '@template'
     tags:
       - { name: event.listener }

@@ -87,6 +87,38 @@ body {
   color: #e0a12b;
   text-shadow: 0 0 6px rgba(255, 208, 77, 0.55), 0 0 12px rgba(255, 208, 77, 0.35);
 }
+
+.topic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin: 6px 0 10px;
+  font-weight: 700;
+  border: 1px solid #d9c49e;
+  background: #fff5df;
+  color: #7a4f00;
+}
+
+.topic-badge .icon {
+  font-size: 18px;
+}
+
+.topic-badge--today .icon {
+  color: #f7c325;
+  text-shadow: 0 0 6px rgba(255, 208, 77, 0.6);
+}
+
+.topic-badge--yesterday .icon {
+  color: #cfd3d8;
+  text-shadow: 0 0 6px rgba(200, 205, 210, 0.5);
+}
+
+.topic-badge--weekfoto .icon {
+  color: #e0a12b;
+  text-shadow: 0 0 6px rgba(255, 208, 77, 0.45);
+}
 a,
 a:link,
 a:visited {
