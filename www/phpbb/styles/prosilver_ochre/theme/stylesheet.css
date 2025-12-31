@@ -77,3 +77,81 @@ table.table1 thead th {
 .dropdown .dropdown-contents {
   border-color: #d9c49e;
 }
+
+/* Replace default blue palette from prosilver */
+html, body {
+  color: #4a3920;
+  background-color: #f3ead7;
+}
+
+h2 {
+  color: #5a4020;
+}
+
+h3 {
+  border-bottom-color: #d9c49e;
+  color: #7a4f00;
+}
+
+.forumbg .header a:hover,
+.forabg .header a:hover,
+th a:hover {
+  color: #f9edd2;
+}
+
+.postlink {
+  border-bottom-color: #c9922a;
+  color: #a46a00;
+}
+
+.postlink:visited {
+  border-bottom-color: #b9831f;
+  color: #8b5b00;
+}
+
+.postlink:hover {
+  background-color: #f6e9cc;
+  color: #7a4f00;
+}
+
+.wrap {
+  background-color: #ffffff;
+  border-color: #e4d2b0;
+}
+
+.headerbar,
+.forumbg,
+.forabg {
+  background-image: linear-gradient(to bottom, #efd49a 0%, #d3a455 100%);
+}
+
+.navbar {
+  background-color: #efe0c3;
+}
+
+.panel {
+  background-color: #fbf6ea;
+  color: #3a2a14;
+}
+
+.bg1 {
+  background-color: #f7efe0;
+}
+
+.bg2 {
+  background-color: #f1e6d0;
+}
+
+.bg3 {
+  background-color: #e6d3b0;
+}
+
+table.zebra-list tr:nth-child(odd) td,
+ul.zebra-list li:nth-child(odd) {
+  background-color: #f7efe0;
+}
+
+table.zebra-list tr:nth-child(even) td,
+ul.zebra-list li:nth-child(even) {
+  background-color: #f1e6d0;
+}
