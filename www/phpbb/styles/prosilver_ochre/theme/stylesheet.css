@@ -1,16 +1,16 @@
 @import url("../../prosilver/theme/stylesheet.css");
 
-/* Ocher accent overrides */
+/* Ochre accent overrides */
 a,
 a:link,
 a:visited {
-  color: #8a5a00;
+  color: #7a4f00;
 }
 
 a:hover,
 a:active,
 a:focus {
-  color: #b97800;
+  color: #a46a00;
 }
 
 .headerbar {
@@ -25,7 +25,7 @@ a:focus {
 .navbar a,
 .navbar a:link,
 .navbar a:visited {
-  color: #6b4b00;
+  color: #5f3f00;
 }
 
 .forabg,

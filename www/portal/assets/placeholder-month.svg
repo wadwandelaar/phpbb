@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
-  <rect width="640" height="360" fill="#d7e2f1"/>
-  <rect x="24" y="24" width="592" height="312" rx="16" fill="#f4f7fb"/>
-  <text x="320" y="190" font-family="Verdana" font-size="32" fill="#2b63b7" text-anchor="middle">Maandopdracht</text>
+  <rect width="640" height="360" fill="#e4d0a6"/>
+  <rect x="24" y="24" width="592" height="312" rx="16" fill="#fff3d8"/>
+  <text x="320" y="190" font-family="Verdana" font-size="32" fill="#a46a00" text-anchor="middle">Maandopdracht</text>
 </svg>
