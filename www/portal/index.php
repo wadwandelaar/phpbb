@@ -123,13 +123,13 @@ function portal_h($value)
 	<link rel="stylesheet" href="./assets/portal.css">
 </head>
 <body>
-	<header class="hero">
-		<div class="hero__inner">
-			<div class="brand">
-				<div class="brand__title">Photodrome</div>
-				<div class="brand__subtitle">Fotografie voor iedereen</div>
+	<header class="portal-hero">
+		<div class="portal-hero__inner">
+			<div class="portal-brand">
+				<div class="portal-brand__title">Photodrome</div>
+				<div class="portal-brand__subtitle">Fotografie voor iedereen</div>
 			</div>
-			<nav class="nav">
+			<nav class="portal-nav">
 				<a href="./">Voorpagina</a>
 				<a href="<?php echo portal_h($login_url); ?>">Inloggen</a>
 				<a href="<?php echo portal_h($register_url); ?>">Registreren</a>

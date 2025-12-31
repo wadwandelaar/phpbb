@@ -156,13 +156,13 @@ if ($request->is_set_post('submit')) {
 	<link rel="stylesheet" href="./assets/portal.css">
 </head>
 <body class="admin-page">
-	<header class="hero">
-		<div class="hero__inner">
-			<div class="brand">
-				<div class="brand__title">Portal beheer</div>
-				<div class="brand__subtitle">Bewerk featured blokken</div>
+	<header class="portal-hero">
+		<div class="portal-hero__inner">
+			<div class="portal-brand">
+				<div class="portal-brand__title">Portal beheer</div>
+				<div class="portal-brand__subtitle">Bewerk featured blokken</div>
 			</div>
-			<nav class="nav">
+			<nav class="portal-nav">
 				<a href="./">Terug naar portal</a>
 				<a href="<?php echo portal_h($phpbb_url_path); ?>">Forum</a>
 			</nav>

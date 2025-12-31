@@ -28,13 +28,13 @@ a {
   text-decoration: none;
 }
 
-.hero {
+.portal-hero {
   background: linear-gradient(180deg, #ead3a5 0%, #d8b36a 100%);
   border-bottom: 1px solid var(--border);
 }
 
-.hero__inner {
-  max-width: 1100px;
+.portal-hero__inner {
+  max-width: 1152px;
   margin: 0 auto;
   padding: 20px 18px;
   display: flex;
@@ -44,25 +44,25 @@ a {
   justify-content: space-between;
 }
 
-.brand__title {
+.portal-brand__title {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1px;
 }
 
-.brand__subtitle {
+.portal-brand__subtitle {
   color: var(--muted);
   margin-top: 2px;
 }
 
-.nav {
+.portal-nav {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   font-weight: 600;
 }
 
-.nav a {
+.portal-nav a {
   padding: 6px 12px;
   border-radius: 6px;
   background: #ffffff;
@@ -71,7 +71,7 @@ a {
 }
 
 .layout {
-  max-width: 1100px;
+  max-width: 1152px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr) 220px;
