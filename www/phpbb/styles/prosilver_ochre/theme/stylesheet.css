@@ -1,0 +1,79 @@
+@import url("../../prosilver/theme/stylesheet.css");
+
+/* Ocher accent overrides */
+a,
+a:link,
+a:visited {
+  color: #8a5a00;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #b97800;
+}
+
+.headerbar {
+  background-color: #d8b36a;
+  background-image: linear-gradient(#e7c47a, #caa04d);
+}
+
+.navbar {
+  background-color: #f2e5c8;
+}
+
+.navbar a,
+.navbar a:link,
+.navbar a:visited {
+  color: #6b4b00;
+}
+
+.forabg,
+.forumbg {
+  border-color: #d9c49e;
+}
+
+.forabg .header,
+.forumbg .header {
+  background-color: #e7d2a9;
+}
+
+.panel,
+.post {
+  border-color: #d9c49e;
+}
+
+.button,
+.button1,
+.button2 {
+  background-color: #c9922a;
+  border-color: #a77217;
+  color: #ffffff;
+}
+
+.button:hover,
+.button1:hover,
+.button2:hover {
+  background-color: #b77f1e;
+  border-color: #8f6313;
+}
+
+.pagination .active span,
+.pagination .active a {
+  background-color: #c9922a;
+  border-color: #a77217;
+  color: #ffffff;
+}
+
+.pagination a:hover,
+.pagination span:hover {
+  border-color: #b77f1e;
+}
+
+table.table1 thead th {
+  color: #5f4300;
+}
+
+.dropdown .dropdown-contents {
+  border-color: #d9c49e;
+}
