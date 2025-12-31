@@ -1,0 +1,21 @@
+{
+  "name": "ochre/portal_trophy",
+  "type": "phpbb-extension",
+  "description": "Adds trophy markers for portal featured topics.",
+  "version": "1.0.0",
+  "license": "GPL-2.0-only",
+  "authors": [
+    {
+      "name": "ochre"
+    }
+  ],
+  "require": {
+    "php": ">=7.2"
+  },
+  "extra": {
+    "display-name": "Portal Trophy",
+    "soft-require": {
+      "phpbb/phpbb": ">=3.3.0,<4.0.0"
+    }
+  }
+}

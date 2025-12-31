@@ -1,6 +1,12 @@
 @import url("../../prosilver/theme/stylesheet.css");
 
 /* Ochre accent overrides */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .portal-hero {
   background: linear-gradient(180deg, #ead3a5 0%, #d8b36a 100%);
   border-bottom: 1px solid #d9c49e;
@@ -55,6 +61,26 @@
 .portal-nav a:focus {
   color: #a46a00;
   text-decoration: none;
+}
+
+.topiclist dd.trophy {
+  width: 48px;
+  text-align: center;
+}
+
+.topiclist .header dd.trophy span {
+  font-weight: 600;
+  color: #7a4f00;
+}
+
+.topic-trophy .icon {
+  color: #c9922a;
+}
+
+@media (max-width: 700px) {
+  .topiclist dd.trophy {
+    display: none;
+  }
 }
 a,
 a:link,

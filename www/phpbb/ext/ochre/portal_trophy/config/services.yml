@@ -1,0 +1,7 @@
+services:
+  ochre.portal_trophy.listener:
+    class: ochre\portal_trophy\event\listener
+    arguments:
+      - '%core.root_path%'
+    tags:
+      - { name: event.listener }
