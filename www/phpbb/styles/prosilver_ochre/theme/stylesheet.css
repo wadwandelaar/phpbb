@@ -9,13 +9,14 @@
 .portal-hero__inner {
   max-width: 1152px;
   margin: 0 auto;
-  padding: 20px 18px;
+  padding: 18px 18px;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   align-items: center;
   justify-content: space-between;
   font-family: "Trebuchet MS", "Verdana", sans-serif;
+  min-height: 86px;
 }
 
 .portal-brand__title {
@@ -37,6 +38,7 @@
   flex-wrap: wrap;
   gap: 10px;
   font-weight: 600;
+  font-size: 14px;
 }
 
 .portal-nav a {
@@ -46,6 +48,7 @@
   border: 1px solid #d9c49e;
   color: #7a4f00;
   text-decoration: none;
+  line-height: 1.2;
 }
 
 .portal-nav a:hover,
