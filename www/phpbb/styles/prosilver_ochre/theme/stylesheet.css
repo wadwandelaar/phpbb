@@ -89,20 +89,23 @@ body {
 }
 
 .topic-badge {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  margin: 6px 0 10px;
-  font-weight: 700;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 10px 0 16px;
+  font-weight: 800;
+  width: 100%;
+  text-align: center;
   border: 1px solid #d9c49e;
   background: #fff5df;
   color: #7a4f00;
 }
 
 .topic-badge .icon {
-  font-size: 18px;
+  font-size: 26px;
 }
 
 .topic-badge--today .icon {
