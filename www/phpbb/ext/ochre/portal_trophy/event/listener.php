@@ -45,7 +45,9 @@ class listener implements EventSubscriberInterface
 			return $this->trophy_map;
 		}
 
-		$portal_path = dirname(rtrim($this->root_path, '/')) . '/portal/data/portal_blocks.json';
+		$resolved_root = realpath($this->root_path);
+		$root = $resolved_root !== false ? $resolved_root : $this->root_path;
+		$portal_path = dirname(rtrim($root, '/')) . '/portal/data/portal_blocks.json';
 		if (!is_file($portal_path)) {
 			$this->trophy_map = [];
 			return $this->trophy_map;
