@@ -2,25 +2,25 @@
 
 /* Black + orange palette */
 html, body {
-  color: #e6e0d6;
+  color: #AAA0A0;
   background-color: #000000;
 }
 
 a,
 a:link,
 a:visited {
-  color: #d98b3a;
+  color: #E88203;
 }
 
 a:hover,
 a:active,
 a:focus {
-  color: #f2b36f;
+  color: #E88203;
 }
 
 .wrap {
-  background-color: #2d2d2d;
-  border-color: #686464;
+  background-color: #000000;
+  border-color: #404040;
 }
 
 .headerbar,
@@ -39,9 +39,9 @@ a:focus {
 }
 
 .panel {
-  background-color: #2d2d2d;
-  color: #e6e0d6;
-  border-color: #686464;
+  background-color: #000000;
+  color: #AAA0A0;
+  border-color: #666666;
   border-radius: 10px;
 }
 
@@ -70,43 +70,43 @@ ul.zebra-list li:nth-child(even) {
 .button,
 .button1,
 .button2 {
-  background-color: #d97b2b;
-  border-color: #b36524;
-  color: #101010;
+  background-color: #C46D00;
+  border-color: #404040;
+  color: #FFFFFF;
 }
 
 .button:hover,
 .button1:hover,
 .button2:hover {
-  background-color: #f0a55c;
-  border-color: #c7772e;
+  background-color: #E88203;
+  border-color: #404040;
 }
 
 .pagination .active span,
 .pagination .active a {
-  background-color: #d97b2b;
-  border-color: #b36524;
-  color: #101010;
+  background-color: #C46D00;
+  border-color: #404040;
+  color: #FFFFFF;
 }
 
 .postlink {
-  border-bottom-color: #d97b2b;
-  color: #d97b2b;
+  border-bottom-color: #E88203;
+  color: #E88203;
 }
 
 .postlink:visited {
-  border-bottom-color: #f0a55c;
-  color: #f0a55c;
+  border-bottom-color: #E88203;
+  color: #E88203;
 }
 
 .postlink:hover {
   background-color: #2b1a0a;
-  color: #f6c18a;
+  color: #E88203;
 }
 
 .topiclist .header dd,
 .topiclist .header dt {
-  color: #e2a86a;
+  color: #E88203;
   font-weight: 700;
 }
 
@@ -115,12 +115,12 @@ ul.zebra-list li:nth-child(even) {
 }
 
 .dropdown .dropdown-contents {
-  border-color: #686464;
+  border-color: #404040;
 }
 
 .portal-hero {
   background: linear-gradient(180deg, #2a2a2a 0%, #141414 100%);
-  border-bottom: 1px solid #686464;
+  border-bottom: 1px solid #404040;
 }
 
 .portal-hero__inner {
@@ -145,7 +145,7 @@ ul.zebra-list li:nth-child(even) {
 
 .portal-brand__subtitle {
   font-size: 13px;
-  color: #b9a999;
+  color: #AAA0A0;
   margin-top: 2px;
   line-height: 1.3;
 }
@@ -162,15 +162,15 @@ ul.zebra-list li:nth-child(even) {
   padding: 6px 12px;
   border-radius: 6px;
   background: #151515;
-  border: 1px solid #686464;
-  color: #d97b2b;
+  border: 1px solid #404040;
+  color: #E88203;
   text-decoration: none;
   line-height: 1.2;
 }
 
 .portal-nav a:hover,
 .portal-nav a:focus {
-  color: #f0a55c;
+  color: #E88203;
   text-decoration: none;
 }
 
@@ -182,11 +182,11 @@ ul.zebra-list li:nth-child(even) {
 
 .topic-trophy-inline .icon {
   font-size: 24px;
-  text-shadow: 0 0 6px rgba(255, 184, 93, 0.4), 0 0 12px rgba(255, 184, 93, 0.25);
+  text-shadow: 0 0 6px rgba(232, 130, 3, 0.4), 0 0 12px rgba(232, 130, 3, 0.25);
 }
 
 .topic-trophy-inline.trophy--today .icon {
-  color: #ffb45c;
+  color: #E88203;
 }
 
 .topic-trophy-inline.trophy--yesterday .icon {
@@ -195,7 +195,7 @@ ul.zebra-list li:nth-child(even) {
 }
 
 .topic-trophy-inline.trophy--weekfoto .icon {
-  color: #d97b2b;
+  color: #E88203;
 }
 
 .topic-badge {
@@ -211,9 +211,9 @@ ul.zebra-list li:nth-child(even) {
   max-width: 100%;
   box-sizing: border-box;
   text-align: center;
-  border: 1px solid #686464;
-  background: #1a1a1a;
-  color: #f0a55c;
+  border: 1px solid #404040;
+  background: #2d2d2d;
+  color: #E88203;
   font-size: 20px;
 }
 
@@ -224,19 +224,18 @@ ul.zebra-list li:nth-child(even) {
   justify-content: center;
   padding: 6px;
   border-radius: 999px;
-  background: #151515;
-  border: 1px solid #686464;
+  background: #000000;
+  border: 1px solid #404040;
   text-shadow: none;
 }
 
-.topiclist li.row,
 .topiclist dl,
 .topiclist dd {
-  border-bottom: 1px solid #686464;
+  border: none;
 }
 
 .topiclist li.row + li.row {
-  border-top: 1px solid #686464;
+  border-top: none;
 }
 
 .topiclist .row-item {
@@ -245,45 +244,50 @@ ul.zebra-list li:nth-child(even) {
 
 .topiclist li.row {
   margin: 10px 0;
-  border: 1px solid #686464;
+  border: 1px solid #404040;
   border-radius: 10px;
   background-color: #2d2d2d;
 }
 
 .topiclist li.row dl.row-item {
   padding: 6px 10px;
+  border: none;
 }
 
 .topiclist .header dt,
 .topiclist .header dd {
-  border-bottom: 1px solid #686464;
+  border-bottom: 1px solid #404040;
+}
+
+.topiclist .header dd {
+  text-align: right;
 }
 
 ul.topiclist dd {
-  border-left-color: #686464;
+  border-left-color: #404040;
 }
 
 .rtl ul.topiclist dd {
-  border-right-color: #686464;
+  border-right-color: #404040;
   border-left-color: transparent;
 }
 
 li.row {
-  border-top-color: #686464;
-  border-bottom-color: #686464;
+  border-top-color: #404040;
+  border-bottom-color: #404040;
   border-radius: 8px;
 }
 
 li.row:hover {
-  background-color: #4d4c4c;
+  background-color: #333333;
 }
 
 li.row:hover dd {
-  border-left-color: #686464;
+  border-left-color: #404040;
 }
 
 .rtl li.row:hover dd {
-  border-right-color: #686464;
+  border-right-color: #404040;
 }
 
 .postbody,
@@ -296,12 +300,12 @@ li.row:hover dd {
 .postdetails,
 .profile,
 .profile .postdetails {
-  color: #e6e0d6;
+  color: #AAA0A0;
 }
 
 .post {
   background-color: #2d2d2d;
-  border: 1px solid #686464;
+  border: 1px solid #404040;
   border-radius: 10px;
   margin-bottom: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
@@ -314,7 +318,7 @@ li.row:hover dd {
 
 .postprofile {
   background-color: #242424;
-  border-right: 1px solid #686464;
+  border-right: 1px solid #404040;
 }
 
 .postprofile .avatar img {
@@ -335,7 +339,7 @@ li.row:hover dd {
 
 .action-bar {
   background-color: #1f1f1f;
-  border: 1px solid #686464;
+  border: 1px solid #404040;
   border-radius: 8px;
   padding: 6px 10px;
 }
@@ -393,21 +397,21 @@ li.row:hover dd {
 }
 
 .topiclist li.row:hover {
-  box-shadow: 0 0 0 1px rgba(217, 139, 58, 0.35), 0 0 14px rgba(217, 139, 58, 0.25);
-  border-color: #d98b3a;
+  box-shadow: 0 0 0 1px rgba(232, 130, 3, 0.35), 0 0 14px rgba(232, 130, 3, 0.25);
+  border-color: #E88203;
 }
 
 /* Softer depth */
 .wrap {
-  background-color: #272727;
+  background-color: #000000;
 }
 
 .panel {
-  background-color: #2a2a2a;
+  background-color: #000000;
 }
 
 .topic-badge--today .icon {
-  color: #ffb45c;
+  color: #E88203;
 }
 
 .topic-badge--yesterday .icon {
@@ -415,5 +419,5 @@ li.row:hover dd {
 }
 
 .topic-badge--weekfoto .icon {
-  color: #d97b2b;
+  color: #E88203;
 }
