@@ -76,6 +76,27 @@
 
 <!-- EVENT overall_header_body_before -->
 
+<header class="portal-hero">
+	<div class="portal-hero__inner">
+		<div class="portal-brand">
+			<div class="portal-brand__title">{SITENAME}</div>
+			<div class="portal-brand__subtitle">{SITE_DESCRIPTION}</div>
+		</div>
+		<nav class="portal-nav">
+			<a href="/">Voorpagina</a>
+			<!-- IF not S_USER_LOGGED_IN -->
+				<a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a>
+				<!-- IF S_REGISTER_ENABLED --><a href="{U_REGISTER}">{L_REGISTER}</a><!-- ENDIF -->
+			<!-- ELSE -->
+				<a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a>
+			<!-- ENDIF -->
+			<a href="{U_FAQ}">{L_FAQ}</a>
+			<a href="{U_SEARCH}">{L_SEARCH}</a>
+			<a href="{U_INDEX}">{L_INDEX}</a>
+		</nav>
+	</div>
+</header>
+
 <div id="page-header">
 	<a id="top" class="top-anchor" accesskey="t"></a>
 	<div id="logodesc">
