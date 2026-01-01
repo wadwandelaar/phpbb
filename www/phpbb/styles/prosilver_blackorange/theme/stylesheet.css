@@ -248,12 +248,29 @@ li.row {
   border-bottom-color: #686464;
 }
 
+li.row:hover {
+  background-color: #3a2b1a;
+}
+
 li.row:hover dd {
   border-left-color: #686464;
 }
 
 .rtl li.row:hover dd {
   border-right-color: #686464;
+}
+
+.postbody,
+.postbody p,
+.content,
+.signature,
+.postprofile,
+.postprofile dd,
+.postprofile dt,
+.postdetails,
+.profile,
+.profile .postdetails {
+  color: #e6e0d6;
 }
 
 .topic-badge--today .icon {
