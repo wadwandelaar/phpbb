@@ -230,7 +230,7 @@ dl.details dd {
 }
 
 .icon.offline {
-	color: #ff0000;
+	color: #E88203;
 }
 
 .icon.icon-blue, a:hover .icon.icon-blue {
@@ -242,7 +242,7 @@ dl.details dd {
 }
 
 .icon.icon-red, a:hover .icon.icon-red {
-	color: #E00;
+	color: #E88203;
 }
 
 .icon.icon-orange, a:hover .icon.icon-orange {
@@ -266,7 +266,7 @@ dl.details dd {
 }
 
 .alert_close .icon:before {
-	background-color: #E00;
+	background-color: #E88203;
 }
 
 /* Jumpbox */
@@ -853,7 +853,7 @@ ul.cplist {
 /* Responsive tabs
 ----------------------------------------*/
 .responsive-tab .responsive-tab-link:before {
-	border-color: #E00;
+	border-color: #E88203;
 }
 
 .responsive-tab .responsive-tab-link:hover:before {
