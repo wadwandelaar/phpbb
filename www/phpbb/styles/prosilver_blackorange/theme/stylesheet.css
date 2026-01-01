@@ -82,6 +82,29 @@ ul.zebra-list li:nth-child(even) {
   border-color: #404040;
 }
 
+.button,
+.button1,
+.button2,
+a.button1,
+a.button2,
+input.button1,
+input.button2,
+input.button3,
+a.button3 {
+  border-radius: 6px;
+  background-image: none;
+}
+
+.button-icon-only {
+  background-color: #2d2d2d;
+  border-color: #404040;
+  color: #E88203;
+}
+
+.button-icon-only:hover {
+  background-color: #333333;
+}
+
 .pagination .active span,
 .pagination .active a {
   background-color: #C46D00;
@@ -310,6 +333,13 @@ li.row:hover dd {
   color: #FFFFFF;
 }
 
+/* Right-side meta in post headers */
+.postbody .author,
+.postbody .author strong,
+.postbody .author a {
+  color: #FFFFFF;
+}
+
 .post {
   background-color: #2d2d2d;
   border: 1px solid #404040;
@@ -351,6 +381,8 @@ li.row:hover dd {
   border: 1px solid #404040;
   border-radius: 8px;
   width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .post-header-row h3 {
@@ -364,6 +396,9 @@ li.row:hover dd {
   font-size: 12px;
   color: #AAA0A0;
   white-space: nowrap;
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .post-buttons {
@@ -408,14 +443,111 @@ li.row:hover dd {
 }
 
 .topiclist .row-item:hover {
-  background-color: #4d4c4c;
+  background-color: #333333;
+}
+
+/* Forum list cards */
+.forabg,
+.forumbg,
+.forabg .header,
+.forumbg .header,
+.forabg .topiclist,
+.forumbg .topiclist {
+  border: none;
+}
+
+.forumlist li.row {
+  border: 1px solid #404040;
+  border-radius: 10px;
+  margin: 10px 0;
+  background-color: #2d2d2d;
+}
+
+.forumlist li.row dl.row-item {
+  border: none;
+  padding: 6px 10px;
+}
+
+.forumlist li.row + li.row {
+  border-top: none;
 }
 
 .action-bar {
-  background-color: #1f1f1f;
+  background-color: #2d2d2d;
   border: 1px solid #404040;
   border-radius: 8px;
   padding: 6px 10px;
+}
+
+.action-bar .button,
+.action-bar .button-search,
+.action-bar .button-search-end {
+  background-color: #2d2d2d;
+  border-color: #404040;
+  color: #E88203;
+}
+
+.action-bar .button:hover,
+.action-bar .button-search:hover,
+.action-bar .button-search-end:hover {
+  background-color: #333333;
+}
+
+.search-box .inputbox,
+.search-box input,
+.search-box input[type="search"] {
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+  color: #FFFFFF;
+}
+
+.search-box .inputbox::placeholder {
+  color: #AAA0A0;
+}
+
+input.inputbox,
+textarea.inputbox,
+select,
+input[type="text"],
+input[type="search"],
+input[type="number"] {
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+  color: #FFFFFF;
+}
+
+input.inputbox:focus,
+textarea.inputbox:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="search"]:focus {
+  border-color: #E88203;
+  outline: none;
+}
+
+fieldset.display-options,
+fieldset.display-options label {
+  color: #AAA0A0;
+}
+
+.jumpbox .dropdown-select,
+.dropdown select {
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+  color: #FFFFFF;
+}
+
+.pagination li a,
+.pagination li span {
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+  color: #AAA0A0;
+}
+
+.pagination li.active span {
+  background-color: #C46D00;
+  border-color: #404040;
+  color: #FFFFFF;
 }
 
 .pagination li a,
