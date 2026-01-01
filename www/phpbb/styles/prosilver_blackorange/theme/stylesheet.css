@@ -3,7 +3,7 @@
 /* Black + orange palette */
 html, body {
   color: #e6e0d6;
-  background-color: #2d2d2d;
+  background-color: #000000;
 }
 
 a,
@@ -232,6 +232,28 @@ ul.zebra-list li:nth-child(even) {
 .topiclist .header dt,
 .topiclist .header dd {
   border-bottom: 1px solid #686464;
+}
+
+ul.topiclist dd {
+  border-left-color: #686464;
+}
+
+.rtl ul.topiclist dd {
+  border-right-color: #686464;
+  border-left-color: transparent;
+}
+
+li.row {
+  border-top-color: #686464;
+  border-bottom-color: #686464;
+}
+
+li.row:hover dd {
+  border-left-color: #686464;
+}
+
+.rtl li.row:hover dd {
+  border-right-color: #686464;
 }
 
 .topic-badge--today .icon {
