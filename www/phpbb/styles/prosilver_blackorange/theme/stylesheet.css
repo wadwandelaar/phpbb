@@ -9,13 +9,13 @@ html, body {
 a,
 a:link,
 a:visited {
-  color: #d97b2b;
+  color: #d98b3a;
 }
 
 a:hover,
 a:active,
 a:focus {
-  color: #f0a55c;
+  color: #f2b36f;
 }
 
 .wrap {
@@ -108,6 +108,10 @@ ul.zebra-list li:nth-child(even) {
 .topiclist .header dt {
   color: #e2a86a;
   font-weight: 700;
+}
+
+.topiclist .header .list-inner {
+  letter-spacing: 0.4px;
 }
 
 .dropdown .dropdown-contents {
@@ -235,6 +239,10 @@ ul.zebra-list li:nth-child(even) {
   border-top: 1px solid #686464;
 }
 
+.topiclist .row-item {
+  padding: 8px 0;
+}
+
 .topiclist .header dt,
 .topiclist .header dd {
   border-bottom: 1px solid #686464;
@@ -289,8 +297,8 @@ li.row:hover dd {
 }
 
 .postbody .content {
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 .postprofile {
@@ -324,6 +332,52 @@ li.row:hover dd {
 .pagination li a,
 .pagination li span {
   border-radius: 6px;
+}
+
+/* Portal-like topic list spacing */
+.topiclist .list-inner {
+  padding: 6px 0;
+}
+
+.topiclist .topictitle {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.topiclist .topic-poster {
+  opacity: 0.85;
+}
+
+/* Tighter post header */
+.postprofile .postauthor {
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+
+.postprofile .postdetails {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.post .postbody h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.postbody .post_details,
+.post .author {
+  font-size: 12px;
+  color: #cdbba8;
+}
+
+/* Softer depth */
+.wrap {
+  background-color: #272727;
+}
+
+.panel {
+  background-color: #2a2a2a;
 }
 
 .topic-badge--today .icon {
