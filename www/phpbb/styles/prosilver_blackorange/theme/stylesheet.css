@@ -20,7 +20,7 @@ a:focus {
 
 .wrap {
   background-color: #101010;
-  border-color: #2a2a2a;
+  border-color: #686464;
 }
 
 .headerbar,
@@ -41,7 +41,7 @@ a:focus {
 .panel {
   background-color: #151515;
   color: #e6e0d6;
-  border-color: #2a2a2a;
+  border-color: #686464;
 }
 
 .bg1 {
@@ -109,12 +109,12 @@ ul.zebra-list li:nth-child(even) {
 }
 
 .dropdown .dropdown-contents {
-  border-color: #2a2a2a;
+  border-color: #686464;
 }
 
 .portal-hero {
   background: linear-gradient(180deg, #2a2a2a 0%, #141414 100%);
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid #686464;
 }
 
 .portal-hero__inner {
@@ -156,7 +156,7 @@ ul.zebra-list li:nth-child(even) {
   padding: 6px 12px;
   border-radius: 6px;
   background: #151515;
-  border: 1px solid #2a2a2a;
+  border: 1px solid #686464;
   color: #d97b2b;
   text-decoration: none;
   line-height: 1.2;
@@ -205,7 +205,7 @@ ul.zebra-list li:nth-child(even) {
   max-width: 100%;
   box-sizing: border-box;
   text-align: center;
-  border: 1px solid #2a2a2a;
+  border: 1px solid #686464;
   background: #1a1a1a;
   color: #f0a55c;
   font-size: 20px;
@@ -219,8 +219,12 @@ ul.zebra-list li:nth-child(even) {
   padding: 6px;
   border-radius: 999px;
   background: #151515;
-  border: 1px solid #2a2a2a;
+  border: 1px solid #686464;
   text-shadow: none;
+}
+
+.topiclist li.row {
+  border-bottom: 1px solid #686464;
 }
 
 .topic-badge--today .icon {
