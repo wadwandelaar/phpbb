@@ -1,0 +1,113 @@
+@import url("../../prosilver/theme/stylesheet.css");
+
+/* Black + orange palette */
+html, body {
+  color: #e6e6e6;
+  background-color: #0e0e0e;
+}
+
+a,
+a:link,
+a:visited {
+  color: #ff7a1a;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #ff9a4d;
+}
+
+.wrap {
+  background-color: #0f0f0f;
+  border-color: #2b2b2b;
+}
+
+.headerbar,
+.forumbg,
+.forabg {
+  background-image: linear-gradient(to bottom, #3a3a3a 0%, #151515 100%);
+}
+
+.navbar {
+  background-color: #151515;
+}
+
+.forabg .header,
+.forumbg .header {
+  background-color: #1f1f1f;
+}
+
+.panel {
+  background-color: #121212;
+  color: #e6e6e6;
+  border-color: #2b2b2b;
+}
+
+.bg1 {
+  background-color: #141414;
+}
+
+.bg2 {
+  background-color: #1a1a1a;
+}
+
+.bg3 {
+  background-color: #202020;
+}
+
+table.zebra-list tr:nth-child(odd) td,
+ul.zebra-list li:nth-child(odd) {
+  background-color: #141414;
+}
+
+table.zebra-list tr:nth-child(even) td,
+ul.zebra-list li:nth-child(even) {
+  background-color: #1a1a1a;
+}
+
+.button,
+.button1,
+.button2 {
+  background-color: #ff7a1a;
+  border-color: #d65f0a;
+  color: #111111;
+}
+
+.button:hover,
+.button1:hover,
+.button2:hover {
+  background-color: #ff9a4d;
+  border-color: #e66b0b;
+}
+
+.pagination .active span,
+.pagination .active a {
+  background-color: #ff7a1a;
+  border-color: #d65f0a;
+  color: #111111;
+}
+
+.postlink {
+  border-bottom-color: #ff7a1a;
+  color: #ff7a1a;
+}
+
+.postlink:visited {
+  border-bottom-color: #ff9a4d;
+  color: #ff9a4d;
+}
+
+.postlink:hover {
+  background-color: #2b1a0a;
+  color: #ffb980;
+}
+
+.topiclist .header dd,
+.topiclist .header dt {
+  color: #ffb980;
+}
+
+.dropdown .dropdown-contents {
+  border-color: #2b2b2b;
+}
