@@ -3,7 +3,7 @@
 /* Black + orange palette */
 html, body {
   color: #e6e0d6;
-  background-color: #0c0c0c;
+  background-color: #2d2d2d;
 }
 
 a,
@@ -19,7 +19,7 @@ a:focus {
 }
 
 .wrap {
-  background-color: #101010;
+  background-color: #2d2d2d;
   border-color: #686464;
 }
 
@@ -39,31 +39,31 @@ a:focus {
 }
 
 .panel {
-  background-color: #151515;
+  background-color: #2d2d2d;
   color: #e6e0d6;
   border-color: #686464;
 }
 
 .bg1 {
-  background-color: #1a1a1a;
+  background-color: #2d2d2d;
 }
 
 .bg2 {
-  background-color: #242424;
+  background-color: #2d2d2d;
 }
 
 .bg3 {
-  background-color: #1f1f1f;
+  background-color: #2d2d2d;
 }
 
 table.zebra-list tr:nth-child(odd) td,
 ul.zebra-list li:nth-child(odd) {
-  background-color: #1a1a1a;
+  background-color: #2d2d2d;
 }
 
 table.zebra-list tr:nth-child(even) td,
 ul.zebra-list li:nth-child(even) {
-  background-color: #242424;
+  background-color: #2d2d2d;
 }
 
 .button,
@@ -223,7 +223,14 @@ ul.zebra-list li:nth-child(even) {
   text-shadow: none;
 }
 
-.topiclist li.row {
+.topiclist li.row,
+.topiclist dl,
+.topiclist dd {
+  border-bottom: 1px solid #686464;
+}
+
+.topiclist .header dt,
+.topiclist .header dd {
   border-bottom: 1px solid #686464;
 }
 
