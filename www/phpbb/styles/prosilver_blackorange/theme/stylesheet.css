@@ -303,14 +303,19 @@ li.row:hover dd {
   color: #AAA0A0;
 }
 
+.postprofile,
+.postprofile dd,
+.postprofile dt,
+.postprofile .postdetails {
+  color: #FFFFFF;
+}
+
 .post {
   background-color: #2d2d2d;
   border: 1px solid #404040;
   border-radius: 10px;
   margin-bottom: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  display: flex;
-  gap: 12px;
 }
 
 .postbody .content {
@@ -323,6 +328,7 @@ li.row:hover dd {
   border-right: 1px solid #404040;
   width: 200px;
   flex: 0 0 200px;
+  order: 1;
 }
 
 .postprofile .avatar img {
@@ -331,6 +337,7 @@ li.row:hover dd {
 
 .postbody {
   flex: 1 1 auto;
+  order: 2;
 }
 
 .post-header-row {
@@ -343,6 +350,7 @@ li.row:hover dd {
   background-color: #1f1f1f;
   border: 1px solid #404040;
   border-radius: 8px;
+  width: 100%;
 }
 
 .post-header-row h3 {
@@ -358,8 +366,28 @@ li.row:hover dd {
   white-space: nowrap;
 }
 
+.post-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin: 6px 0 10px;
+  float: none;
+}
+
 @media (max-width: 900px) {
-  .post {
+  .post-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.post-main {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .post-main {
     flex-direction: column;
   }
 
@@ -367,11 +395,7 @@ li.row:hover dd {
     width: auto;
     border-right: none;
     border-bottom: 1px solid #404040;
-  }
-
-  .post-header-row {
-    flex-direction: column;
-    align-items: flex-start;
+    order: 0;
   }
 }
 
