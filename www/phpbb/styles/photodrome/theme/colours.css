@@ -1058,10 +1058,10 @@ fieldset.quick-login input.inputbox {
 
 a.button1, input.button1, input.button3, a.button2, input.button2 {
 	color: #FFF;
-	background-color: #580f0f; /* Old browsers */ /* FF3.6+ */
-	background-image: -webkit-linear-gradient(top, #a21c1c 0%, #580f0f 100%);
-	background-image: linear-gradient(to bottom, #a21c1c 0%,#580f0f 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a21c1c', endColorstr='#580f0f',GradientType=0 ); /* IE6-9 */
+	background-color: #7A3F00; /* Old browsers */ /* FF3.6+ */
+	background-image: -webkit-linear-gradient(top, #E88203 0%, #7A3F00 100%);
+	background-image: linear-gradient(to bottom, #E88203 0%,#7A3F00 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E88203', endColorstr='#7A3F00',GradientType=0 ); /* IE6-9 */
 	text-shadow: 1px 0 1px #000;
 }
 

@@ -5,28 +5,28 @@
 /* ----- Images ----- */
 /* Top Gradient */
 #logodesc {
-	background-color: #A21C1C; /* Old browsers */ /* FF3.6+ */
-	background-image: -webkit-linear-gradient(top, #A21C1C 0%, #560f0f 100%);
-	background-image: linear-gradient(to bottom, #A21C1C 0%,#560f0f 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A21C1C', endColorstr='#560f0f',GradientType=0 ); /* IE6-9 */
+	background-color: #E88203; /* Old browsers */ /* FF3.6+ */
+	background-image: -webkit-linear-gradient(top, #E88203 0%, #7A3F00 100%);
+	background-image: linear-gradient(to bottom, #E88203 0%,#7A3F00 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E88203', endColorstr='#7A3F00',GradientType=0 ); /* IE6-9 */
 }
 .top-title-background { }
 
 /* Header for Forum/Topic List */
 li.header {
-	background-color: #A21C1C; /* Old browsers */ /* FF3.6+ */
-	background-image: -webkit-linear-gradient(top, #A21C1C 0%, #580f0f 100%);
-	background-image: linear-gradient(to bottom, #A21C1C 0%,#580f0f 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A21C1C', endColorstr='#580f0f',GradientType=0 ); /* IE6-9 */
+	background-color: #E88203; /* Old browsers */ /* FF3.6+ */
+	background-image: -webkit-linear-gradient(top, #E88203 0%, #7A3F00 100%);
+	background-image: linear-gradient(to bottom, #E88203 0%,#7A3F00 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E88203', endColorstr='#7A3F00',GradientType=0 ); /* IE6-9 */
 }
 
 /* Breadcrumbs */
 @media only screen and (min-width: 768px) {
 	.dvg-bc span {
-		background-color: #861717;
-		background-image: -webkit-linear-gradient(top, #A21C1C 0%,#861717 50%,#591010 100%);
-		background-image: linear-gradient(to bottom, #A21C1C 0%,#861717 50%,#591010 100%);
-		background: linear-gradient(to bottom, #A21C1C 0%,#861717 50%,#591010 100%);
+		background-color: #B45E00;
+		background-image: -webkit-linear-gradient(top, #E88203 0%,#B45E00 50%,#6A3500 100%);
+		background-image: linear-gradient(to bottom, #E88203 0%,#B45E00 50%,#6A3500 100%);
+		background: linear-gradient(to bottom, #E88203 0%,#B45E00 50%,#6A3500 100%);
 		display: inline-block;
 		height: 20px;
 		line-height: 20px;
@@ -38,19 +38,19 @@ li.header {
 /* ----- Main ----- */
 /* Headers */
 h1.sidemenu {
-	background-color: #861717;
-	background-image: -webkit-linear-gradient(top, #A21C1C 0%,#861717 50%,#591010 100%);
-	background-image: linear-gradient(to bottom, #A21C1C 0%,#861717 50%,#591010 100%);
-	background: linear-gradient(to bottom, #A21C1C 0%,#861717 50%,#591010 100%);
+	background-color: #B45E00;
+	background-image: -webkit-linear-gradient(top, #E88203 0%,#B45E00 50%,#6A3500 100%);
+	background-image: linear-gradient(to bottom, #E88203 0%,#B45E00 50%,#6A3500 100%);
+	background: linear-gradient(to bottom, #E88203 0%,#B45E00 50%,#6A3500 100%);
 }
-h2, .content h2, .panel h2{ color: #A21C1C; }
-h3 { border-bottom-color: #CCC; color: #A21C1C; }
+h2, .content h2, .panel h2{ color: #E88203; }
+h3 { border-bottom-color: #CCC; color: #E88203; }
 li.header a:link { color: #FFF; }
 li.header a:hover { text-decoration: underline; }
 /* Default Links */
-a.forumlink, a.topictitle, .quotetitle, .attachtitle, .codetitle, p.moderators { color: #A21C1C; }
+a.forumlink, a.topictitle, .quotetitle, .attachtitle, .codetitle, p.moderators { color: #E88203; }
 a:hover, .arrow-left:hover, .arrow-right:hover { color: #FFF; text-decoration: none; }
-#dvg-bot-menu a:hover { color: #A21C1C; text-decoration: underline; }
+#dvg-bot-menu a:hover { color: #E88203; text-decoration: underline; }
 #dvg-loginlinks a:hover { color: #C2C2C2; }
 
 /* ADDs Links */
@@ -59,22 +59,22 @@ a { color: #FFFFFF; }
 a:hover	{ color: #FAFAFA; }
 .copyright a { color: #CCC; }
 .copyright a:hover { color: #FFFFFF; text-decoration: underline; }
-h5.module a { color: #A21C1C; }
+h5.module a { color: #E88203; }
 .module a:hover { color: #FFFFFF; text-decoration: underline; }
 
 /* ----- Main Menu ----- */
-ul#navmenu li a:active, ul#navmenu li a:focus, ul#navmenu li a:link, ul#navmenu li a:visited { color: #A21C1C; }
+ul#navmenu li a:active, ul#navmenu li a:focus, ul#navmenu li a:link, ul#navmenu li a:visited { color: #E88203; }
 ul#navmenu li a:hover { color: #FFF; }
 
 /* ----- Notifications ----- */
 .dropdown-extended .header {
-	background-color: #A21C1C; /* Old browsers */ /* FF3.6+ */
-	background-image: -webkit-linear-gradient(top, #A21C1C 0%, #580f0f 100%);
-	background-image: linear-gradient(to bottom, #A21C1C 0%,#580f0f 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A21C1C', endColorstr='#580f0f',GradientType=0 ); /* IE6-9 */
+	background-color: #E88203; /* Old browsers */ /* FF3.6+ */
+	background-image: -webkit-linear-gradient(top, #E88203 0%, #7A3F00 100%);
+	background-image: linear-gradient(to bottom, #E88203 0%,#7A3F00 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E88203', endColorstr='#7A3F00',GradientType=0 ); /* IE6-9 */
 }
 .dropdown .pointer-inner2 {
-	border-color: #A21C1C transparent;
+	border-color: #E88203 transparent;
 }
 .dropdown-extended ul li:hover {
 	color: #C2C2C2;
@@ -88,40 +88,40 @@ ul#navmenu li a:hover { color: #FFF; }
 
 /* ----- Buttons ----- */
 a.button1, input.button1, input.button3, a.button2, input.button2 {
-	background-color: #580f0f; /* Old browsers */ /* FF3.6+ */
-	background-image: -webkit-linear-gradient(top, #A21C1C 0%, #580f0f 100%);
-	background-image: linear-gradient(to bottom, #A21C1C 0%,#580f0f 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A21C1C', endColorstr='#580f0f',GradientType=0 ); /* IE6-9 */
+	background-color: #7A3F00; /* Old browsers */ /* FF3.6+ */
+	background-image: -webkit-linear-gradient(top, #E88203 0%, #7A3F00 100%);
+	background-image: linear-gradient(to bottom, #E88203 0%,#7A3F00 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E88203', endColorstr='#7A3F00',GradientType=0 ); /* IE6-9 */
 }
 a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover {
-	background-color: #570f0f; /* Old browsers */ /* FF3.6+ */
-	background-image: -webkit-linear-gradient(top, #7c1616 0%, #570f0f 100%);
-	background-image: linear-gradient(to bottom, #7c1616 0%,#570f0f 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c1616', endColorstr='#570f0f',GradientType=0 ); /* IE6-9 */
+	background-color: #6A3500; /* Old browsers */ /* FF3.6+ */
+	background-image: -webkit-linear-gradient(top, #C46D00 0%, #6A3500 100%);
+	background-image: linear-gradient(to bottom, #C46D00 0%,#6A3500 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#C46D00', endColorstr='#6A3500',GradientType=0 ); /* IE6-9 */
 }
 a.button1:visited, input.button1:visited, a.button2:visited, input.button2:visited, input.button3:visited { color: #FFF; }
 
 /* ----- Forum, Topic titles ----- */
-a.forumtitle, a.forumtitle:visited, a.forumtitle:active, a.forumtitle:link, a.topictitle, a.topictitle:visited, a.topictitle:active, a.topictitle:link { color: #A21C1C; }
+a.forumtitle, a.forumtitle:visited, a.forumtitle:active, a.forumtitle:link, a.topictitle, a.topictitle:visited, a.topictitle:active, a.topictitle:link { color: #E88203; }
 a.forumtitle:hover, a.topictitle:hover { color: #FFF; }
 
 /* ----- Post links ----- */
-.postlink, .postlink:active, .postlink:visited .postlink:link { color:#A21C1C; }
+.postlink, .postlink:active, .postlink:visited .postlink:link { color:#E88203; }
 .postlink:hover { background-color: transparent; color: #FFF; }
-.postprofile a:link, .postprofile a:active, .postprofile a:visited, .postprofile dt.author a, .post:target h3 a { color:#A21C1C; }
+.postprofile a:link, .postprofile a:active, .postprofile a:visited, .postprofile dt.author a, .post:target h3 a { color:#E88203; }
 
 /* ----- UCP Top Menu ----- */
-.tabs .activetab > a, .tabs .activetab > a:hover, .tabs .tab > a { color: #A21C1C; }
-.navigation a, .navigation .active-subsection a { color: #A21C1C; }
+.tabs .activetab > a, .tabs .activetab > a:hover, .tabs .tab > a { color: #E88203; }
+.navigation a, .navigation .active-subsection a { color: #E88203; }
 
 /* ----- Pagination ----- */
-.pagination li a, .pagination li a:link, .pagination li a:visited, .pagination li a:active { color:#A21C1C; }
+.pagination li a, .pagination li a:link, .pagination li a:visited, .pagination li a:active { color:#E88203; }
 .pagination li a:hover { color: #FFF; }
 
 /* ----- Side Menu ----- */
 ul.sidemenu a { background: url("./images/sidelist.gif") no-repeat; }
 ul.sidemenu a:link, ul.sidemenu a:active, ul.sidemenu a:focus, ul.sidemenu a:visited { color: #FFF; }
-ul.sidemenu a:hover { color: #A21C1C; }
+ul.sidemenu a:hover { color: #E88203; }
 
 /* ----- Polls ----- */
 .pollbar1, .pollbar2, .pollbar3, .pollbar4, .pollbar5 {
@@ -129,4 +129,4 @@ ul.sidemenu a:hover { color: #A21C1C; }
 	border-bottom: 1px solid #222;
 	border-right: 1px solid #222;
 }
-fieldset.polls dl.voted { color: #A21C1C; }
+fieldset.polls dl.voted { color: #E88203; }

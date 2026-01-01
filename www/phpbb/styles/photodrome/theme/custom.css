@@ -198,6 +198,89 @@ ul#navmenu li a, ul#navmenu li a:active, ul#navmenu li a:focus, ul#navmenu li a:
 	padding: 15px 10px;
 }
 
+/* Portal trophies and topic badges */
+.topic-trophy-inline {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 8px;
+}
+
+.topic-trophy-inline .icon {
+	color: #E88203;
+	font-size: 20px;
+	line-height: 1;
+	text-shadow: 0 0 6px rgba(232, 130, 3, 0.4);
+}
+
+.topic-trophy-inline.trophy--today .icon {
+	color: #F5C36B;
+	text-shadow: 0 0 8px rgba(245, 195, 107, 0.55);
+}
+
+.topic-trophy-inline.trophy--weekfoto .icon {
+	color: #E88203;
+	text-shadow: 0 0 8px rgba(232, 130, 3, 0.55);
+}
+
+.topic-trophy-inline.trophy--yesterday .icon {
+	color: #C9CDD3;
+	text-shadow: 0 0 8px rgba(201, 205, 211, 0.45);
+}
+
+.topic-badge {
+	align-items: center;
+	background: #2D2D2D;
+	border: 1px solid #4B4A48;
+	border-radius: 6px;
+	color: #FAFAFA;
+	display: flex;
+	font-size: 1.05em;
+	font-weight: bold;
+	justify-content: center;
+	letter-spacing: 0.04em;
+	margin: 10px 0 16px;
+	padding: 10px 14px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+.topic-badge .icon {
+	font-size: 20px;
+	margin-right: 8px;
+}
+
+.topic-badge--today {
+	border-color: #E88203;
+	box-shadow: 0 0 0 1px rgba(232, 130, 3, 0.2) inset;
+	color: #FFE1A6;
+}
+
+.topic-badge--today .icon {
+	color: #F5C36B;
+}
+
+.topic-badge--weekfoto {
+	border-color: #C46D00;
+	box-shadow: 0 0 0 1px rgba(196, 109, 0, 0.2) inset;
+	color: #F9D9AE;
+}
+
+.topic-badge--weekfoto .icon {
+	color: #E88203;
+}
+
+.topic-badge--yesterday {
+	border-color: #8B8F96;
+	box-shadow: 0 0 0 1px rgba(139, 143, 150, 0.2) inset;
+	color: #E4E7EB;
+}
+
+.topic-badge--yesterday .icon {
+	color: #C9CDD3;
+}
+
 ul#navmenu li a:hover {
 	color: #FFF;
 	text-decoration: none;

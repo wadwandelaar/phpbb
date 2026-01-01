@@ -3,6 +3,18 @@
 <!-- EVENT viewtopic_topic_title_before -->
 <h2 class="topic-title"><!-- EVENT viewtopic_topic_title_prepend --><a href="{U_VIEW_TOPIC}">{TOPIC_TITLE}</a><!-- EVENT viewtopic_topic_title_append --></h2>
 <!-- EVENT viewtopic_topic_title_after -->
+<!-- IF S_TOPIC_BADGE -->
+<div class="topic-badge topic-badge--{TOPIC_BADGE_TYPE}">
+	<!-- IF TOPIC_BADGE_TYPE eq 'today' -->
+		<i class="icon fa-star fa-fw" aria-hidden="true"></i>
+	<!-- ELSEIF TOPIC_BADGE_TYPE eq 'yesterday' -->
+		<i class="icon fa-star fa-fw" aria-hidden="true"></i>
+	<!-- ELSE -->
+		<i class="icon fa-trophy fa-fw" aria-hidden="true"></i>
+	<!-- ENDIF -->
+	<span>{TOPIC_BADGE_TITLE}</span>
+</div>
+<!-- ENDIF -->
 <!-- NOTE: remove the style="display: none" when you want to have the forum description on the topic body -->
 <!-- IF FORUM_DESC --><div style="display: none !important;">{FORUM_DESC}<br /></div><!-- ENDIF -->
 

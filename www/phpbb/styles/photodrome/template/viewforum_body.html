@@ -166,6 +166,18 @@
 								<i class="icon fa-file fa-fw icon-red icon-md" aria-hidden="true"></i><span class="sr-only">{NEW_POST}</span>
 							</a>
 						<!-- ENDIF -->
+						<!-- IF topicrow.S_TROPHY -->
+							<span class="topic-trophy-inline trophy--{topicrow.TROPHY_TYPE}" title="{topicrow.TROPHY_TITLE}">
+								<!-- IF topicrow.TROPHY_TYPE eq 'today' -->
+									<i class="icon fa-star fa-fw" aria-hidden="true"></i>
+								<!-- ELSEIF topicrow.TROPHY_TYPE eq 'yesterday' -->
+									<i class="icon fa-star fa-fw" aria-hidden="true"></i>
+								<!-- ELSE -->
+									<i class="icon fa-trophy fa-fw" aria-hidden="true"></i>
+								<!-- ENDIF -->
+								<span class="sr-only">{topicrow.TROPHY_TITLE}</span>
+							</span>
+						<!-- ENDIF -->
 						<!-- IF topicrow.U_VIEW_TOPIC --><a href="{topicrow.U_VIEW_TOPIC}" class="topictitle">{topicrow.TOPIC_TITLE}</a><!-- ELSE -->{topicrow.TOPIC_TITLE}<!-- ENDIF -->
 						<!-- IF topicrow.S_TOPIC_UNAPPROVED or topicrow.S_POSTS_UNAPPROVED -->
 							<a href="{topicrow.U_MCP_QUEUE}" title="<!-- IF topicrow.S_TOPIC_UNAPPROVED -->{L_TOPIC_UNAPPROVED}<!-- ELSE -->{L_POSTS_UNAPPROVED}<!-- ENDIF -->">
