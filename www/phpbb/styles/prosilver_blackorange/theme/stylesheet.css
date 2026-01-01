@@ -42,6 +42,7 @@ a:focus {
   background-color: #2d2d2d;
   color: #e6e0d6;
   border-color: #686464;
+  border-radius: 10px;
 }
 
 .bg1 {
@@ -106,6 +107,7 @@ ul.zebra-list li:nth-child(even) {
 .topiclist .header dd,
 .topiclist .header dt {
   color: #e2a86a;
+  font-weight: 700;
 }
 
 .dropdown .dropdown-contents {
@@ -250,6 +252,7 @@ ul.topiclist dd {
 li.row {
   border-top-color: #686464;
   border-bottom-color: #686464;
+  border-radius: 8px;
 }
 
 li.row:hover {
@@ -275,6 +278,52 @@ li.row:hover dd {
 .profile,
 .profile .postdetails {
   color: #e6e0d6;
+}
+
+.post {
+  background-color: #2d2d2d;
+  border: 1px solid #686464;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.postbody .content {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.postprofile {
+  background-color: #242424;
+  border-right: 1px solid #686464;
+}
+
+.postprofile .avatar img {
+  border-radius: 8px;
+}
+
+.topiclist .header {
+  background-color: #1f1f1f;
+}
+
+.topiclist .row-item {
+  background-color: #2d2d2d;
+}
+
+.topiclist .row-item:hover {
+  background-color: #4d4c4c;
+}
+
+.action-bar {
+  background-color: #1f1f1f;
+  border: 1px solid #686464;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+.pagination li a,
+.pagination li span {
+  border-radius: 6px;
 }
 
 .topic-badge--today .icon {
