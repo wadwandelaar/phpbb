@@ -258,6 +258,26 @@ body {
   color: #a8a0a0;
 }
 
+/* Viewtopic post panels */
+.post {
+  background: #2f2f2f;
+  border: 1px solid #77706b;
+  border-radius: 12px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+  margin-bottom: 16px;
+}
+
+.postprofile {
+  background: #262626;
+  border-right: 1px solid #77706b;
+}
+
+.postbody {
+  color: #a8a0a0;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
 h2 {
   color: #e6e0d6;
 }
@@ -306,6 +326,91 @@ th a:hover {
 .panel {
   background-color: #343434;
   color: #e6e0d6;
+}
+
+/* Forum index / forum list panels */
+.forabg,
+.forumbg {
+  background: #2f2f2f;
+  border: 1px solid #77706b;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  padding: 6px;
+}
+
+.forabg .header,
+.forumbg .header {
+  background: #1f1f1f;
+  border-bottom: 1px solid #77706b;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.forabg .header a,
+.forumbg .header a {
+  color: #d97b2b;
+}
+
+ul.topiclist {
+  padding: 0;
+}
+
+ul.topiclist li.header {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85em;
+}
+
+ul.topiclist li.row {
+  background: #343434;
+  border-bottom: 1px solid #77706b;
+  padding: 10px 8px;
+}
+
+ul.topiclist li.row:hover {
+  background: #3b3b3b;
+}
+
+ul.topiclist li.row:last-child {
+  border-bottom: 0;
+}
+
+/* Topic list cards */
+ul.topiclist.topics li.row {
+  background: #2f2f2f;
+  border: 1px solid #77706b;
+  border-radius: 12px;
+  margin: 10px 0;
+  padding: 12px 10px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+ul.topiclist.topics li.row:hover {
+  background: #363636;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.4);
+}
+
+ul.topiclist.topics li.row:last-child {
+  border-bottom: 1px solid #77706b;
+}
+
+ul.topiclist.topics dd,
+ul.topiclist.topics .list-inner,
+ul.topiclist.topics .topic-poster {
+  color: #a8a0a0;
+}
+
+.topiclist .row-item a.topictitle,
+.topiclist .row-item a.forumtitle {
+  font-size: 1.05em;
+  letter-spacing: 0.02em;
+}
+
+.stat-block,
+.stat-block ul {
+  background: #2f2f2f;
+  border: 1px solid #77706b;
+  border-radius: 10px;
 }
 
 .bg1 {
