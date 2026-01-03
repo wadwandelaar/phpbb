@@ -28,3 +28,5 @@ www/phpbb/images/avatars/upload/*
 !www/phpbb/images/avatars/upload/index.html
 
 www/phpbb/config.php
+
+www/portal/data/portal_blocks.json
