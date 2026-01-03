@@ -144,6 +144,7 @@
 			<li class="header">
 				<dl class="row-item">
 					<dt<!-- IF S_DISPLAY_ACTIVE --> id="active_topics"<!-- ENDIF -->><div class="list-inner"><!-- IF S_DISPLAY_ACTIVE -->{L_ACTIVE_TOPICS}<!-- ELSEIF topicrow.S_TOPIC_TYPE_SWITCH and (topicrow.S_POST_ANNOUNCE or topicrow.S_POST_GLOBAL) -->{L_ANNOUNCEMENTS}<!-- ELSE -->{L_TOPICS}<!-- ENDIF --></div></dt>
+					<dd class="trophies"><span class="sr-only">Trophy</span></dd>
 					<dd class="posts">{L_REPLIES}</dd>
 					<dd class="views">{L_VIEWS}</dd>
 					<dd class="lastpost"><span>{L_LAST_POST}</span></dd>
@@ -165,18 +166,6 @@
 							<a class="unread" href="{topicrow.U_NEWEST_POST}">
 								<i class="icon fa-file fa-fw icon-red icon-md" aria-hidden="true"></i><span class="sr-only">{NEW_POST}</span>
 							</a>
-						<!-- ENDIF -->
-						<!-- IF topicrow.S_TROPHY -->
-							<span class="topic-trophy-inline trophy--{topicrow.TROPHY_TYPE}" title="{topicrow.TROPHY_TITLE}">
-								<!-- IF topicrow.TROPHY_TYPE eq 'today' -->
-									<i class="icon fa-star fa-fw" aria-hidden="true"></i>
-								<!-- ELSEIF topicrow.TROPHY_TYPE eq 'yesterday' -->
-									<i class="icon fa-star fa-fw" aria-hidden="true"></i>
-								<!-- ELSE -->
-									<i class="icon fa-trophy fa-fw" aria-hidden="true"></i>
-								<!-- ENDIF -->
-								<span class="sr-only">{topicrow.TROPHY_TITLE}</span>
-							</span>
 						<!-- ENDIF -->
 						<!-- IF topicrow.U_VIEW_TOPIC --><a href="{topicrow.U_VIEW_TOPIC}" class="topictitle">{topicrow.TOPIC_TITLE}</a><!-- ELSE -->{topicrow.TOPIC_TITLE}<!-- ENDIF -->
 						<!-- IF topicrow.S_TOPIC_UNAPPROVED or topicrow.S_POSTS_UNAPPROVED -->
@@ -235,6 +224,20 @@
 						<!-- EVENT topiclist_row_append -->
 					</div>
 				</dt>
+				<dd class="trophies">
+					<!-- IF topicrow.S_TROPHY -->
+						<span class="topic-trophy-inline trophy--{topicrow.TROPHY_TYPE}" title="{topicrow.TROPHY_TITLE}">
+							<!-- IF topicrow.TROPHY_TYPE eq 'today' -->
+								<i class="icon fa-star fa-fw" aria-hidden="true"></i>
+							<!-- ELSEIF topicrow.TROPHY_TYPE eq 'yesterday' -->
+								<i class="icon fa-star fa-fw" aria-hidden="true"></i>
+							<!-- ELSE -->
+								<i class="icon fa-trophy fa-fw" aria-hidden="true"></i>
+							<!-- ENDIF -->
+							<span class="sr-only">{topicrow.TROPHY_TITLE}</span>
+						</span>
+					<!-- ENDIF -->
+				</dd>
 				<dd class="posts">{topicrow.REPLIES} <dfn>{L_REPLIES}</dfn></dd>
 				<dd class="views">{topicrow.VIEWS} <dfn>{L_VIEWS}</dfn></dd>
 				<dd class="lastpost">
