@@ -113,6 +113,8 @@ function portal_h($value)
 {
 	return htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
 }
+$portal_css_version = @filemtime(__DIR__ . '/assets/portal.css');
+$portal_css_version = $portal_css_version ?: time();
 ?>
 <!doctype html>
 <html lang="nl">
@@ -120,7 +122,7 @@ function portal_h($value)
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo portal_h($portal_title); ?></title>
-	<link rel="stylesheet" href="./assets/portal.css">
+	<link rel="stylesheet" href="./assets/portal.css?v=<?php echo (int) $portal_css_version; ?>">
 </head>
 <body>
 	<header class="portal-hero">
