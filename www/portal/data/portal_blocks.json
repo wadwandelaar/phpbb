@@ -1,4 +1,10 @@
 {
+  "uitgelicht": {
+    "title": "Uitgelicht maandopdracht",
+    "link": "/forum/viewtopic.php?t=4",
+    "image": "./assets/placeholder-month.svg",
+    "caption": "De maandopdracht voor januari is: \"Winter\"."
+  },
   "todays_choice": {
     "title": "Today's choice",
     "link": "/forum/viewtopic.php?t=1",

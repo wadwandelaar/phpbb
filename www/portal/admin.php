@@ -76,6 +76,12 @@ if (!$is_allowed) {
 
 $portal_blocks_path = __DIR__ . '/data/portal_blocks.json';
 $portal_blocks = [
+	'uitgelicht' => [
+		'title' => 'Uitgelicht maandopdracht',
+		'link' => $phpbb_url_path . 'viewtopic.php?t=4',
+		'image' => './assets/placeholder-month.svg',
+		'caption' => 'De maandopdracht voor januari is: "Winter".',
+	],
 	'todays_choice' => [
 		'title' => "Today's choice",
 		'link' => $phpbb_url_path . 'viewtopic.php?t=1',

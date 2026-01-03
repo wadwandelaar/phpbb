@@ -10,6 +10,12 @@ $auth->acl($user->data);
 $user->setup();
 
 $portal_blocks = [
+	'uitgelicht' => [
+		'title' => 'Uitgelicht maandopdracht',
+		'link' => $phpbb_url_path . 'viewtopic.php?t=4',
+		'image' => './assets/placeholder-month.svg',
+		'caption' => 'De maandopdracht voor januari is: "Winter".',
+	],
 	'todays_choice' => [
 		'title' => "Today's choice",
 		'link' => $phpbb_url_path . 'viewtopic.php?t=1',
@@ -196,11 +202,13 @@ $portal_css_version = $portal_css_version ?: time();
 			<section class="panel panel--feature">
 				<h2 class="panel__title">Uitgelicht</h2>
 				<div class="feature">
-					<div class="feature__image"></div>
+					<a class="feature__image" href="<?php echo portal_h($portal_blocks['uitgelicht']['link']); ?>">
+						<img src="<?php echo portal_h($portal_blocks['uitgelicht']['image']); ?>" alt="">
+					</a>
 					<div class="feature__copy">
-						<h3>Weekfoto</h3>
-						<p>Plaats hier de winnaar van de weekfoto of een vaste promotie.</p>
-						<a class="button button--ghost" href="<?php echo portal_h($forum_url); ?>">Naar het forum</a>
+						<h3><?php echo portal_h($portal_blocks['uitgelicht']['title']); ?></h3>
+						<p><?php echo portal_h($portal_blocks['uitgelicht']['caption']); ?></p>
+						<a class="button button--ghost" href="<?php echo portal_h($portal_blocks['uitgelicht']['link']); ?>">Bekijk onderwerp</a>
 					</div>
 				</div>
 			</section>
