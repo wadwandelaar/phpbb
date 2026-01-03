@@ -449,7 +449,7 @@ ul.topiclist.topics dd:last-child {
 }
 
 ul.topiclist.topics .list-inner {
-  padding: 4px 6px;
+  padding: 4px 6px 4px 66px;
 }
 
 ul.topiclist.topics a.topictitle {
