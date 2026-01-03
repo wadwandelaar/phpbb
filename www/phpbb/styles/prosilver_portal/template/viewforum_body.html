@@ -226,7 +226,7 @@
 				</dt>
 				<dd class="trophies">
 					<!-- IF topicrow.S_TROPHY -->
-						<span class="topic-trophy-inline trophy--{topicrow.TROPHY_TYPE}" title="{topicrow.TROPHY_TITLE}">
+						<a class="topic-trophy-inline trophy--{topicrow.TROPHY_TYPE}" href="{topicrow.U_VIEW_TOPIC}" title="{topicrow.TROPHY_TITLE}">
 							<!-- IF topicrow.TROPHY_TYPE eq 'today' -->
 								<i class="icon fa-star fa-fw" aria-hidden="true"></i>
 							<!-- ELSEIF topicrow.TROPHY_TYPE eq 'yesterday' -->
@@ -235,7 +235,7 @@
 								<i class="icon fa-trophy fa-fw" aria-hidden="true"></i>
 							<!-- ENDIF -->
 							<span class="sr-only">{topicrow.TROPHY_TITLE}</span>
-						</span>
+						</a>
 					<!-- ENDIF -->
 				</dd>
 				<dd class="posts">{topicrow.REPLIES} <dfn>{L_REPLIES}</dfn></dd>
