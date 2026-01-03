@@ -126,8 +126,11 @@ function portal_h($value)
 	<header class="portal-hero">
 		<div class="portal-hero__inner">
 			<div class="portal-brand">
-				<div class="portal-brand__title">Photodrome</div>
-				<div class="portal-brand__subtitle">Fotografie voor iedereen</div>
+				<img class="portal-brand__logo" src="./assets/logo.jpg" alt="Photodrome logo">
+				<div class="portal-brand__text">
+					<div class="portal-brand__title">Photodrome</div>
+					<div class="portal-brand__subtitle">Fotografie voor iedereen</div>
+				</div>
 			</div>
 			<nav class="portal-nav">
 				<a href="./">Voorpagina</a>

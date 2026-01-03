@@ -79,8 +79,11 @@
 <header class="portal-hero">
 	<div class="portal-hero__inner">
 		<div class="portal-brand">
-			<div class="portal-brand__title">{SITENAME}</div>
-			<div class="portal-brand__subtitle">{SITE_DESCRIPTION}</div>
+			<img class="portal-brand__logo" src="/assets/logo.jpg" alt="{SITENAME} logo">
+			<div class="portal-brand__text">
+				<div class="portal-brand__title">{SITENAME}</div>
+				<div class="portal-brand__subtitle">{SITE_DESCRIPTION}</div>
+			</div>
 		</div>
 		<nav class="portal-nav">
 			<a href="/">Voorpagina</a>
@@ -105,9 +108,6 @@
 			<div class="inner">
 
 			<div id="site-description" class="site-description">
-		<a id="logo" class="logo" href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ L_SITE_HOME }}{% else %}{{ L_INDEX }}{% endif %}">
-					<span class="site_logo"></span>
-				</a>
 				<h1>{SITENAME}</h1>
 				<p>{SITE_DESCRIPTION}</p>
 				<p class="skiplink"><a href="#start_here">{L_SKIP}</a></p>

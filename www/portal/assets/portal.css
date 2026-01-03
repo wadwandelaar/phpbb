@@ -51,6 +51,19 @@ a {
   min-height: 86px;
 }
 
+.portal-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.portal-brand__logo {
+  height: 56px;
+  width: auto;
+  display: block;
+  border-radius: 6px;
+}
+
 .portal-brand__title {
   font-size: 28px;
   font-weight: 700;
