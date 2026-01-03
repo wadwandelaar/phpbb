@@ -1,0 +1,296 @@
+@import url("../../prosilver/theme/stylesheet.css");
+
+/* Portal palette */
+/* bg: #1a1a1a, panel: #2d2d2d, border: #686464, accent: #d97b2b */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Portal header */
+.portal-hero {
+  background: linear-gradient(180deg, #2a2a2a 0%, #141414 100%);
+  border-bottom: 1px solid #686464;
+}
+
+.portal-hero__inner {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 18px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Trebuchet MS", "Verdana", sans-serif;
+  min-height: 86px;
+}
+
+.portal-brand__title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  color: #e6e0d6;
+}
+
+.portal-brand__subtitle {
+  font-size: 13px;
+  color: #b9a999;
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+.portal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.portal-nav a {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #151515;
+  border: 1px solid #686464;
+  color: #d97b2b;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.portal-nav a:hover,
+.portal-nav a:focus {
+  color: #f0a55c;
+  text-decoration: none;
+}
+
+/* Trophy markers */
+.topic-trophy-inline {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 6px;
+}
+
+.topic-trophy-inline .icon {
+  font-size: 24px;
+  text-shadow: 0 0 6px rgba(245, 195, 107, 0.6), 0 0 12px rgba(245, 195, 107, 0.35);
+}
+
+.topic-trophy-inline.trophy--today .icon {
+  color: #f5c36b;
+}
+
+.topic-trophy-inline.trophy--yesterday .icon {
+  color: #cfd3d8;
+  text-shadow: 0 0 6px rgba(200, 205, 210, 0.6), 0 0 12px rgba(200, 205, 210, 0.35);
+}
+
+.topic-trophy-inline.trophy--weekfoto .icon {
+  color: #d97b2b;
+  text-shadow: 0 0 6px rgba(217, 123, 43, 0.55), 0 0 12px rgba(217, 123, 43, 0.35);
+}
+
+/* Topic badges */
+.topic-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 10px 0 16px;
+  font-weight: 800;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #686464;
+  background: #2d2d2d;
+  color: #f0a55c;
+  font-size: 20px;
+}
+
+.topic-badge .icon {
+  font-size: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 999px;
+  background: #151515;
+  border: 1px solid #686464;
+  text-shadow: none;
+}
+
+.topic-badge--today .icon {
+  color: #f5c36b;
+}
+
+.topic-badge--yesterday .icon {
+  color: #cfd3d8;
+}
+
+.topic-badge--weekfoto .icon {
+  color: #d97b2b;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  color: #d97b2b;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #f0a55c;
+}
+
+/* Headers and navigation */
+.headerbar {
+  background-color: #2a2a2a;
+  background-image: linear-gradient(#2f2f2f, #1b1b1b);
+}
+
+.navbar {
+  background-color: #1f1f1f;
+}
+
+.navbar a,
+.navbar a:link,
+.navbar a:visited {
+  color: #d97b2b;
+}
+
+.forabg,
+.forumbg {
+  border-color: #686464;
+}
+
+.forabg .header,
+.forumbg .header {
+  background-color: #2f2f2f;
+}
+
+.panel,
+.post {
+  border-color: #686464;
+}
+
+.button,
+.button1,
+.button2 {
+  background-color: #d97b2b;
+  border-color: #b46a1e;
+  color: #ffffff;
+}
+
+.button:hover,
+.button1:hover,
+.button2:hover {
+  background-color: #f0a55c;
+  border-color: #d08940;
+}
+
+.pagination .active span,
+.pagination .active a {
+  background-color: #d97b2b;
+  border-color: #b46a1e;
+  color: #ffffff;
+}
+
+.pagination a:hover,
+.pagination span:hover {
+  border-color: #d08940;
+}
+
+table.table1 thead th {
+  color: #e6e0d6;
+}
+
+.dropdown .dropdown-contents {
+  border-color: #686464;
+}
+
+/* Replace default blue palette from prosilver */
+html,
+body {
+  color: #e6e0d6;
+  background-color: #1a1a1a;
+}
+
+h2 {
+  color: #e6e0d6;
+}
+
+h3 {
+  border-bottom-color: #686464;
+  color: #d97b2b;
+}
+
+.forumbg .header a:hover,
+.forabg .header a:hover,
+th a:hover {
+  color: #f0a55c;
+}
+
+.postlink {
+  border-bottom-color: #d97b2b;
+  color: #d97b2b;
+}
+
+.postlink:visited {
+  border-bottom-color: #b46a1e;
+  color: #b46a1e;
+}
+
+.postlink:hover {
+  background-color: #242424;
+  color: #f0a55c;
+}
+
+.wrap {
+  background-color: #1f1f1f;
+  border-color: #2a2a2a;
+}
+
+.headerbar,
+.forumbg,
+.forabg {
+  background-image: linear-gradient(to bottom, #2f2f2f 0%, #1f1f1f 100%);
+}
+
+.navbar {
+  background-color: #1f1f1f;
+}
+
+.panel {
+  background-color: #2d2d2d;
+  color: #e6e0d6;
+}
+
+.bg1 {
+  background-color: #2d2d2d;
+}
+
+.bg2 {
+  background-color: #262626;
+}
+
+.bg3 {
+  background-color: #222222;
+}
+
+table.zebra-list tr:nth-child(odd) td,
+ul.zebra-list li:nth-child(odd) {
+  background-color: #2d2d2d;
+}
+
+table.zebra-list tr:nth-child(even) td,
+ul.zebra-list li:nth-child(even) {
+  background-color: #262626;
+}
