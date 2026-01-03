@@ -161,11 +161,9 @@ $portal_css_version = $portal_css_version ?: time();
 			</section>
 
 			<section class="panel">
-				<h2 class="panel__title"><?php echo portal_h($portal_blocks['yesterdays_choice']['title']); ?></h2>
-				<a class="promo" href="<?php echo portal_h($portal_blocks['yesterdays_choice']['link']); ?>">
-					<img src="<?php echo portal_h($portal_blocks['yesterdays_choice']['image']); ?>" alt="">
-					<span><?php echo portal_h($portal_blocks['yesterdays_choice']['caption']); ?></span>
-				</a>
+				<h2 class="panel__title">Online</h2>
+				<p class="muted"><?php echo $online_total; ?></p>
+				<div class="online-list"><?php echo $online_list; ?></div>
 			</section>
 
 			<section class="panel">
@@ -252,9 +250,11 @@ $portal_css_version = $portal_css_version ?: time();
 
 		<aside class="col col--right">
 			<section class="panel">
-				<h2 class="panel__title">Online</h2>
-				<p class="muted"><?php echo $online_total; ?></p>
-				<div class="online-list"><?php echo $online_list; ?></div>
+				<h2 class="panel__title"><?php echo portal_h($portal_blocks['yesterdays_choice']['title']); ?></h2>
+				<a class="promo" href="<?php echo portal_h($portal_blocks['yesterdays_choice']['link']); ?>">
+					<img src="<?php echo portal_h($portal_blocks['yesterdays_choice']['image']); ?>" alt="">
+					<span><?php echo portal_h($portal_blocks['yesterdays_choice']['caption']); ?></span>
+				</a>
 			</section>
 
 			<section class="panel">

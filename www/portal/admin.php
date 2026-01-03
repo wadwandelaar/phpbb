@@ -89,17 +89,17 @@ $portal_blocks = [
 		'image' => './assets/placeholder-week.svg',
 		'caption' => 'Vervang dit blok met de foto van vandaag.',
 	],
-	'yesterdays_choice' => [
-		'title' => "Yesterday's choice",
-		'link' => $phpbb_url_path . 'viewtopic.php?t=2',
-		'image' => './assets/placeholder-week.svg',
-		'caption' => 'Vervang dit blok met de foto van gisteren.',
-	],
 	'weekfoto' => [
 		'title' => 'Weekfoto',
 		'link' => $phpbb_url_path . 'viewtopic.php?t=3',
 		'image' => './assets/placeholder-week.svg',
 		'caption' => 'Vervang dit blok met de weekfoto winnaar.',
+	],
+	'yesterdays_choice' => [
+		'title' => "Yesterday's choice",
+		'link' => $phpbb_url_path . 'viewtopic.php?t=2',
+		'image' => './assets/placeholder-week.svg',
+		'caption' => 'Vervang dit blok met de foto van gisteren.',
 	],
 	'maandopdracht' => [
 		'title' => 'Maandopdracht',
