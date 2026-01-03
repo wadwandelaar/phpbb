@@ -1,4 +1,5 @@
 <?php
+
 define('IN_PHPBB', true);
 $phpbb_root_path = '../phpbb/';
 $phpbb_url_path = '/forum/';
