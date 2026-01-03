@@ -362,6 +362,10 @@ ul.topiclist li.header {
   font-size: 0.85em;
 }
 
+ul.topiclist li.header dt .list-inner {
+  margin-right: 535px;
+}
+
 ul.topiclist li.row {
   background: #343434;
   border-bottom: 1px solid #77706b;
@@ -385,7 +389,7 @@ ul.topiclist .list-inner p {
 }
 
 ul.topiclist dd.trophies {
-  width: 7%;
+  width: 95px;
   text-align: center;
 }
 
@@ -394,15 +398,15 @@ ul.topiclist dd.trophies .topic-trophy-inline {
 }
 
 ul.topiclist dd.posts {
-  width: 7%;
+  width: 95px;
 }
 
 ul.topiclist dd.views {
-  width: 7%;
+  width: 95px;
 }
 
 ul.topiclist dd.lastpost {
-  width: 28%;
+  width: 250px;
 }
 
 /* Topic list cards */
