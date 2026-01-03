@@ -232,6 +232,16 @@ body {
   color: #a8a0a0;
 }
 
+.postprofile,
+.postprofile dt,
+.postprofile dd,
+.postprofile strong,
+.postprofile a,
+.postprofile a:link,
+.postprofile a:visited {
+  color: #a8a0a0;
+}
+
 h2 {
   color: #e6e0d6;
 }
