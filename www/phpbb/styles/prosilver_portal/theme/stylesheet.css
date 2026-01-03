@@ -393,6 +393,18 @@ ul.topiclist dd.trophies .topic-trophy-inline {
   margin: 0;
 }
 
+ul.topiclist dd.posts {
+  width: 7%;
+}
+
+ul.topiclist dd.views {
+  width: 7%;
+}
+
+ul.topiclist dd.lastpost {
+  width: 28%;
+}
+
 /* Topic list cards */
 ul.topiclist.topics li.row {
   background: #2f2f2f;
@@ -416,6 +428,16 @@ ul.topiclist.topics dd,
 ul.topiclist.topics .list-inner,
 ul.topiclist.topics .topic-poster {
   color: #a8a0a0;
+}
+
+ul.topiclist.topics dd {
+  border-left: 1px solid #77706b;
+  padding: 8px 6px;
+  box-sizing: border-box;
+}
+
+ul.topiclist.topics dd:last-child {
+  border-right: 0;
 }
 
 ul.topiclist.topics .list-inner {
