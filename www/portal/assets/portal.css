@@ -56,6 +56,8 @@ a {
   display: flex;
   align-items: center;
   gap: 14px;
+  justify-content: center;
+  width: 100%;
 }
 
 .portal-brand__logo {
@@ -87,6 +89,7 @@ a {
   font-size: 13px;
   margin-left: 0;
   justify-content: center;
+  width: 100%;
 }
 
 .portal-nav a {
