@@ -388,6 +388,10 @@ ul.topiclist .list-inner p {
   color: #a8a0a0;
 }
 
+ul.topiclist dd {
+  box-sizing: border-box;
+}
+
 ul.topiclist dd.trophies {
   width: 95px;
   text-align: center;
