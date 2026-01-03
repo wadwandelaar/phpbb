@@ -264,18 +264,19 @@ body {
   border: 1px solid #77706b;
   border-radius: 12px;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .postprofile {
   background: #262626;
   border-right: 1px solid #77706b;
+  padding-top: 10px;
 }
 
 .postbody {
   color: #a8a0a0;
-  font-size: 1.05em;
-  line-height: 1.6;
+  font-size: 1.08em;
+  line-height: 1.65;
 }
 
 h2 {
@@ -375,6 +376,14 @@ ul.topiclist li.row:last-child {
   border-bottom: 0;
 }
 
+ul.topiclist dd,
+ul.topiclist dd span,
+ul.topiclist dd dfn,
+ul.topiclist .list-inner,
+ul.topiclist .list-inner p {
+  color: #a8a0a0;
+}
+
 /* Topic list cards */
 ul.topiclist.topics li.row {
   background: #2f2f2f;
@@ -398,6 +407,15 @@ ul.topiclist.topics dd,
 ul.topiclist.topics .list-inner,
 ul.topiclist.topics .topic-poster {
   color: #a8a0a0;
+}
+
+ul.topiclist.topics .list-inner {
+  padding: 4px 6px;
+}
+
+ul.topiclist.topics a.topictitle {
+  font-size: 1.15em;
+  line-height: 1.3;
 }
 
 .topiclist .row-item a.topictitle,
